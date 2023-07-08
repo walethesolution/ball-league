@@ -21,7 +21,9 @@ const Header: React.FC = () => {
           src={Logo}
           alt="Kings league logo"
         />
-        <h2 className="text-xl text-black font-medium">KINGS LEAGUE</h2>
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <h2 className="text-xl text-black font-medium">KINGS LEAGUE</h2>
+        </div>
         <div className="cursor-pointer" onClick={handleMenuToggle}>
           {menuOpen ? (
             <Image src={CloseIcon} alt="close-icon" />
@@ -33,11 +35,11 @@ const Header: React.FC = () => {
       {menuOpen && (
         <div className="absolute right-0 w-1/2 top-[83px] p-2 shadow">
           <ul>
-            <li className="mb-2 text-lg font-normal">GAMES</li>
-            <li className="mb-2 text-lg font-normal">ABOUT US</li>
-            <li className="mb-2 text-lg font-normal">PLAYERS</li>
-            <li className="mb-2 text-lg font-normal">STATS</li>
-            <li className="mb-2 text-lg font-normal">NEWS & BLOG</li>
+            <li className="mb-2 text-lg font-normal md:mb-4">GAMES</li>
+            <li className="mb-2 text-lg font-normal md:mb-4">ABOUT US</li>
+            <li className="mb-2 text-lg font-normal md:mb-4">PLAYERS</li>
+            <li className="mb-2 text-lg font-normal md:mb-4">STATS</li>
+            <li className="mb-2 text-lg font-normal md:mb-4">NEWS & BLOG</li>
           </ul>
         </div>
       )}
