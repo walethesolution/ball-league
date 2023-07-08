@@ -9,11 +9,11 @@ import Updates from "./Updates";
 const Index = () => {
   return (
     <div>
-      <Hero />
+      {/* <Hero />
       <About />
       <Games />
       <Welcome />
-      <Updates />
+      <Updates /> */}
     </div>
   );
 };
