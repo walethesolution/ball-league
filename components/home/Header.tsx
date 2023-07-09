@@ -29,7 +29,7 @@ const Header: React.FC = () => {
 
   return (
     <div className="relative">
-      <nav className="flex items-center justify-between mx-3 my-3 h-[83px] lg:h-[145px]">
+      <nav className="flex items-center justify-between mx-3 h-[83px] lg:h-[145px]">
         <div className="flex items-center">
           <Image
             className="w-[61px] h-[64px] md:w-[85px] h-[72px] lg:w-[137px] lg:h-[113px]"
