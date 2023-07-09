@@ -9,8 +9,8 @@ import Updates from "./Updates";
 const Index = () => {
   return (
     <div>
-      {/* <Hero />
-      <About />
+      <Hero />
+      {/* <About />
       <Games />
       <Welcome />
       <Updates /> */}

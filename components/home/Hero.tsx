@@ -1,9 +1,10 @@
 import Image from "next/image";
+import HomeCourt from "../../public/assets/images/home-court.svg";
 
 const Hero = () => {
   return (
-    <div>
-      <Image src={""} alt="this is home court" />
+    <div className="w-screen">
+      <Image src={HomeCourt} alt="this is home court" className="" />
     </div>
   );
 };
