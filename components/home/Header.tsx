@@ -1,6 +1,6 @@
 "use client";
 
-import React, { use, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "../../public/assets/images/logo.svg";
 import Hamburger from "../../public/assets/icons/hamburger.svg";
@@ -13,25 +13,48 @@ const Header: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      // close menu when screensize reaches breakpoints
+      if (window.innerWidth >= 1024) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="relative">
-      <div className="flex items-center justify-between mx-3 my-3 h-[83px]">
-        <Image
-          className="w-[61px] h-[64px]"
-          src={Logo}
-          alt="Kings league logo"
-        />
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <h2 className="text-xl text-black font-medium">KINGS LEAGUE</h2>
+      <nav className="flex items-center justify-between mx-3 my-3 h-[83px] lg:h-[145px]">
+        <div className="flex items-center">
+          <Image
+            className="w-[61px] h-[64px] md:w-[85px] h-[72px] lg:w-[137px] lg:h-[113px]"
+            src={Logo}
+            alt="Kings league logo"
+          />
+          <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2">
+            <h2 className="text-xl text-black font-medium">KINGS LEAGUE</h2>
+          </div>
         </div>
-        <div className="cursor-pointer" onClick={handleMenuToggle}>
+        <ul className="hidden lg:flex items-center space-x-16 lg:justify-center flex-grow">
+          <li className="text-lg font-normal ">GAMES</li>
+          <li className="text-lg font-normal ">ABOUT US</li>
+          <li className="text-lg font-normal ">PLAYERS</li>
+          <li className="text-lg font-normal ">STATS</li>
+          <li className="text-lg font-normal ">NEWS & BLOG</li>
+        </ul>
+        <div className="lg:hidden cursor-pointer" onClick={handleMenuToggle}>
           {menuOpen ? (
             <Image src={CloseIcon} alt="close-icon" />
           ) : (
             <Image src={Hamburger} alt="hamburger" />
           )}
         </div>
-      </div>
+      </nav>
       {menuOpen && (
         <div className="absolute right-0 w-1/2 top-[83px] p-2 shadow">
           <ul>
