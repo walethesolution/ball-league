@@ -32,7 +32,7 @@ const Header: React.FC = () => {
       <nav className="flex items-center justify-between mx-3 h-[83px] lg:h-[145px]">
         <div className="flex items-center">
           <Image
-            className="w-[61px] h-[64px] md:w-[85px] h-[72px] lg:w-[137px] lg:h-[113px]"
+            className="w-[61px] h-[64px] md:w-[85px] md:h-[72px] lg:w-[137px] lg:h-[113px]"
             src={Logo}
             alt="Kings league logo"
           />
@@ -56,8 +56,8 @@ const Header: React.FC = () => {
         </div>
       </nav>
       {menuOpen && (
-        <div className="absolute right-0 w-1/2 top-[83px] p-2 shadow">
-          <ul>
+        <div className="absolute right-0 w-1/2 top-[83px] p-2 shadow z-[9999] bg-[#FFFFFA]">
+          <ul className="mx-4">
             <li className="mb-2 text-lg font-normal md:mb-4">GAMES</li>
             <li className="mb-2 text-lg font-normal md:mb-4">ABOUT US</li>
             <li className="mb-2 text-lg font-normal md:mb-4">PLAYERS</li>

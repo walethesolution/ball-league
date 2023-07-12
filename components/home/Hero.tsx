@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import "../../styles/hero.css";
 import Slides from "./Slides";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <>
       <Swiper navigation={true} modules={[Navigation]}>
