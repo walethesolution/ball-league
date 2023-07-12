@@ -9,10 +9,10 @@ const Index = () => {
   return (
     <>
       <Hero />
-      {/* <About />
-      <Games />
+      <About />
+      {/* <Games />
       <Welcome />
-      <Updates /> */}
+      <Updates />  */}
     </>
   );
 };
