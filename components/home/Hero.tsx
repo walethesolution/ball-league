@@ -9,11 +9,13 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "../../styles/hero.css";
+import Slides from "./Slides";
 
 const Hero = () => {
   return (
     <>
-      <Swiper>
+      <Swiper navigation={true} modules={[Navigation]}>
         <SwiperSlide>
           <div className="relative">
             <Image
