@@ -9,9 +9,11 @@ const Index = () => {
   return (
     <>
       <Hero />
-      <About />
-      {/* <Games />
-      <Welcome />
+      <div className="flex flex-col gap-14">
+        <About />
+        <Games />
+      </div>
+      {/* <Welcome />
       <Updates />  */}
     </>
   );

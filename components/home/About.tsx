@@ -4,11 +4,11 @@ import Logo from "../../public/assets/images/logo.svg";
 
 const About: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-6 xl:gap-10">
+    <div className="flex flex-col mt-10 items-center justify-center gap-6 xl:gap-10 ">
       <Image src={Logo} alt="The logo" />
-      <h2 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
+      <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
         WHO WE ARE
-      </h2>
+      </h1>
       <p className="w-full text-center text-[#1F2937] text-sm leading-8 font-normal px-4 md:text-base md:leading-9 md:px-6 xl:text-2xl xl:leading-10">
         Kings League is a league for our community.
         <br />
