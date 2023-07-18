@@ -3,6 +3,11 @@ import Link from "next/link";
 import Logo from "../../public/assets/images/logo.svg";
 
 const About: React.FC = () => {
+  // Add an Image to the about
+  // section
+  // This image should have every member of the league on it.
+  // Too much whitespace
+
   return (
     <div className="flex flex-col mt-10 items-center justify-center gap-6 xl:gap-10 ">
       <Image src={Logo} alt="The logo" />

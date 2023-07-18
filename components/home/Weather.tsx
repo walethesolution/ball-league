@@ -39,7 +39,7 @@ const Weather: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-6 bg-slate-100 rounded-xl py-3">
+    <div className="flex flex-col items-center justfify-center gap-6 bg-slate-100 rounded-xl py-3 w-[246px] mx-auto">
       <h1 className="font-semibold">Weather for Home Court:</h1>
       {weatherData ? (
         <>
@@ -50,8 +50,8 @@ const Weather: React.FC = () => {
             width={60}
             height={60}
           />
-          <p className="font-medium">
-            Conditions: {weatherData.current.condition.text}
+          <p className=" text-sm font-medium mx-4 text-center">
+            {weatherData.current.condition.text}
           </p>
         </>
       ) : (
