@@ -20,7 +20,7 @@ const Games = () => {
       <div className="flex flex-col gap-4 items-center justify-center lg:flex lg:flex-row  lg:gap-16">
         <div className="flex flex-col items-center gap-6 my-4">
           <p className="text-center text-sm font-normal md:text-base xl:text-xl">
-            July 16, 2023
+            July 23, 2023
           </p>
           <div className="w-[347px] h-[177px] bg-[#EBDCCB] flex flex-row items-center justify-center gap-9 font-semibold text-sm md:w-[489px] md:h-[220px] md:text-base md:gap-14 xl:w-[687px] xl:h-[269px] xl:text-xl xl:gap-20">
             <div className="flex flex-col items-center gap-2">
