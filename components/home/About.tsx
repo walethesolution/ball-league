@@ -14,7 +14,7 @@ const About: React.FC = () => {
       <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
         WHO WE ARE
       </h1>
-      <p className="w-full text-center text-[#1F2937] text-sm leading-8 font-normal px-4 md:text-base md:leading-9 md:px-6 xl:text-2xl xl:leading-10">
+      <p className="w-full text-center text-[#1F2937] text-base leading-8 font-normal px-4  md:leading-9 md:px-6 xl:text-2xl xl:leading-10">
         Kings League is a league for our community.
         <br />
         Founded in 2023, headquarters in Brooklyn, NY.
