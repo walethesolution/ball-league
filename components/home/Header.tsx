@@ -56,8 +56,8 @@ const Header: React.FC = () => {
         </div>
       </nav>
       {menuOpen && (
-        <div className="absolute right-0 w-1/2 top-[83px] p-2 shadow z-[9999] bg-[#FFFFFA]">
-          <ul className="mx-4">
+        <div className="absolute right-0 w-3/4 top-[83px] p-2 shadow z-[9999] bg-[#FFFFFA] h-screen ">
+          <ul className="flex flex-col mx-4 gap-4">
             <li className="mb-2 text-lg font-normal md:mb-4">GAMES</li>
             <li className="mb-2 text-lg font-normal md:mb-4">ABOUT US</li>
             <li className="mb-2 text-lg font-normal md:mb-4">PLAYERS</li>

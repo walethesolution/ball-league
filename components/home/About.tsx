@@ -9,7 +9,7 @@ const About: React.FC = () => {
   // Too much whitespace
 
   return (
-    <div className="flex flex-col mt-10 items-center justify-center gap-6 xl:gap-10 ">
+    <div className="flex flex-col mt-24 items-center justify-center gap-6 xl:gap-10 ">
       <Image src={Logo} alt="The logo" />
       <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
         WHO WE ARE
