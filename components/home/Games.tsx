@@ -43,13 +43,23 @@ const Games = () => {
               <p>TEAM B</p>
             </div>
           </div>
-          <div className="xl:mt-4">
-            <Link
-              href={""}
-              className="bg-[#2A6041] text-white px-7 py-2.5 text-sm text-center font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base"
-            >
-              VIEW MORE GAMES
-            </Link>
+          <div className="xl:mt-4 flex flex-row gap-4 w-full text-center">
+            <div className="flex-grow">
+              <Link
+                href={""}
+                className="w-full bg-[#2A6041] text-white px-7 py-2.5 text-sm text-center font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base"
+              >
+                VIEW MORE GAMES
+              </Link>
+            </div>
+            <div className="flex-grow">
+              <Link
+                href={""}
+                className="w-full bg-[#3708e4] text-white px-7 py-2.5 text-sm text-center font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base"
+              >
+                REGISTER
+              </Link>
+            </div>
           </div>
         </div>
         <Weather />
