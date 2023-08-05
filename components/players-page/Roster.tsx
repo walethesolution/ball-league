@@ -4,8 +4,8 @@ const Roster = () => {
       <h2 className="text-lg font-bold border-b-2 border-black md:text-xl xl:text-2xl">
         LEAGUE ROSTER
       </h2>
-      <div className="bg-[#D9D9D9] w-[369px] h-[49px] flex items-center px-6">
-        <ul className="flex gap-32 font-medium">
+      <div className="bg-[#D9D9D9] w-[400px] h-[49px] flex items-center px-6">
+        <ul className="flex gap-24 font-medium">
           <li>Players</li>
           <li>Pos</li>
         </ul>
