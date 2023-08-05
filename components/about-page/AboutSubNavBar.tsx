@@ -1,7 +1,4 @@
-import Image from "next/image";
-import Divider from "../../public/assets/icons/divider.svg";
-
-const SubNavBar = () => {
+const AboutSubNavBar = () => {
   return (
     <div className="h-[64px] bg-black flex flex-row items-center gap-4 px-6">
       <div className="text-[#FFFFFA] border-r-2 pr-3">
@@ -14,4 +11,4 @@ const SubNavBar = () => {
   );
 };
 
-export default SubNavBar;
+export default AboutSubNavBar;

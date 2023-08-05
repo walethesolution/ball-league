@@ -1,4 +1,4 @@
-import SubNavBar from "./SubNavBar";
+import SubNavBar from "./AboutSubNavBar";
 import Why from "./Why";
 import Members from "./Members";
 
