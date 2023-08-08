@@ -1,4 +1,4 @@
-import PlayerCard from "./PlayerCard";
+import PlayerCards from "./PlayerCards";
 import PlayerSubNavBar from "./PlayerSubNavBar";
 import Roster from "./Roster";
 
@@ -8,7 +8,7 @@ const Index = () => {
       <PlayerSubNavBar />
       <div className="flex flex-col gap-4">
         <Roster />
-        <PlayerCard />
+        <PlayerCards />
       </div>
     </div>
   );
