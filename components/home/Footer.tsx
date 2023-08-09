@@ -35,6 +35,7 @@ const Footer = () => {
               <Link href="/">Code of conduct</Link>
               <Link href="/">Sponsors</Link>
               <Link href="/">Events</Link>
+              <Link href="/">Gallery</Link>
             </div>
           </div>
         </div>
