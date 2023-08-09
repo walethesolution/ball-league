@@ -58,7 +58,7 @@ const Header: React.FC = () => {
           <Link href={"/players"} className="text-lg font-normal">
             PLAYERS
           </Link>
-          <Link href={"/games"} className="text-lg font-normal">
+          <Link href={"/stats"} className="text-lg font-normal">
             STATS
           </Link>
           <Link href={"/updates"} className="text-lg font-normal">
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
               PLAYERS
             </Link>
             <Link
-              href={"/games"}
+              href={"/stats"}
               className="mb-2 text-lg font-normal md:mb-4"
               onClick={closeMenu}
             >
