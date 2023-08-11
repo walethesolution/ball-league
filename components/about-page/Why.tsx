@@ -10,8 +10,9 @@ const Why = () => {
         <div className="flex flex-col text-base px-6 gap-4 text-[#1F2937] md:px-12 lg:px-20 xl:text-2xl xl:px-40">
           <div>
             <p>
-              Our mission is to build a basketball league that serves as a
-              catalyst for positive change within our community.
+              Kings League is a 3v3 basketball halfcourt league and OUR mission
+              is to build a basketball league that serves as a catalyst for
+              positive change within our community.
             </p>
           </div>
           <div>
