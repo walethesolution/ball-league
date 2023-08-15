@@ -1,6 +1,6 @@
 import Header from "@/components/home/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Oswald, Teko } from "next/font/google";
 import Footer from "@/components/home/Footer";
 
 const inter = Inter({ subsets: ["latin"] });

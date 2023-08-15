@@ -45,7 +45,9 @@ const Header: React.FC = () => {
             />
           </Link>
           <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2">
-            <h2 className="text-xl text-black font-medium">KINGS LEAGUE</h2>
+            <h2 className="text-xl text-black font-lobster font-semibold">
+              KINGS LEAGUE
+            </h2>
           </div>
         </div>
         <ul className="hidden lg:flex items-center space-x-16 lg:justify-center flex-grow">
