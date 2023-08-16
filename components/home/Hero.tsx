@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../../styles/hero.css";
-import Slides from "./Slides";
+import "../../styles/animations.css";
 
 const Hero: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
               alt="this is home court"
               className="w-full h-screen object-cover md:h-full"
             />
-            <div className="absolute inset-0 flex justify-center items-center  mt-[3rem]">
+            <div className="absolute inset-0 flex justify-center items-center mt-[3rem] fade-in">
               <p className="text-white font-bold text-2xl md:text-3xl text-center lg:text-5xl">
                 DISCOVER <br className="md:hidden" /> THE{" "}
                 <br className="md:hidden" /> COURT OF LEGENDS
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
               alt="Three guys on court"
               className="w-full h-screen object-cover md:h-full"
             />
-            <div className="absolute flex justify-center items-center inset-0 mt-[5rem]">
+            <div className="absolute flex justify-center items-center inset-0 mt-[5rem] fade-in">
               <p className="text-white font-bold text-2xl md:text-3xl text-center lg:text-5xl">
                 EMBRACE THE SPIRIT OF COMPETITION <br /> AND CAMARADARIE
               </p>
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
               alt="Basketball shooting form"
               className="w-full h-screen object-cover md:h-full"
             />
-            <div className="absolute flex justify-center items-center inset-0 mt-[4rem]">
+            <div className="absolute flex justify-center items-center inset-0 mt-[4rem] fade-in">
               <p className="text-white font-bold text-2xl md:text-3xl text-center lg:text-5xl">
                 THE SHOOTER&apos;S FORM, <br />
                 TAKE YOUR GAME <br className="md:hidden" /> TO THE NEXT LEVEL

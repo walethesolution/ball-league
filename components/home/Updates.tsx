@@ -1,11 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import MiamiCourt from "../../public/assets/images/maimi-view-ct.svg";
 import RodgeCourt from "../../public/assets/images/rodg-n-ct.svg";
+import "../../styles/animations.css";
+import useFadeInScroll from "@/styles/useFadeInScroll";
 
 const Updates: React.FC = () => {
+  const { ref, isVisible } = useFadeInScroll();
+
   return (
-    <div>
+    <div ref={ref} className={`${isVisible ? "fade-in" : ""}`}>
       <div className="flex flex-col gap-4 items-center justify-center xl:gap-7">
         <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
           LATEST UPDATES

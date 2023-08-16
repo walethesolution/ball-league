@@ -1,11 +1,21 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
 import Weather from "./Weather";
 import GamesDiv from "./GamesDiv";
+import "../../styles/animations.css";
+import useFadeInScroll from "@/styles/useFadeInScroll";
 
 const Games = () => {
+  const { ref, isVisible } = useFadeInScroll();
+
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div
+      ref={ref}
+      className={`flex flex-col justify-center items-center ${
+        isVisible ? "fade-in" : ""
+      }`}
+    >
       {/*First section*/}
       <div className="flex flex-col gap-4">
         <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">

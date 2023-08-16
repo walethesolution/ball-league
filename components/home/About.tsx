@@ -1,15 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../public/assets/images/logo.svg";
+import "../../styles/animations.css";
+import useFadeInScroll from "@/styles/useFadeInScroll";
 
 const About: React.FC = () => {
   // Add an Image to the about
   // section
   // This image should have every member of the league on it.
   // Too much whitespace
+  const { ref, isVisible } = useFadeInScroll();
 
   return (
-    <div className="flex flex-col mt-24 items-center justify-center gap-6 xl:gap-10 ">
+    <div
+      ref={ref}
+      className={`flex flex-col mt-24 items-center justify-center gap-6 xl:gap-10 ${
+        isVisible ? "fade-in" : ""
+      }`}
+    >
       <Image src={Logo} alt="The logo" />
       <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
         WHO WE ARE
