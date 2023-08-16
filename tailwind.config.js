@@ -7,12 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        teko: ["Teko"],
-        oswald: ["Oswald", "sans-serif"],
-        lobster: ["Lobster", "cursive"],
-        news: ["Newsreader", "serif"],
-      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

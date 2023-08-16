@@ -6,12 +6,19 @@ import Link from "next/link";
 import Logo from "../../public/assets/images/logo.svg";
 import Hamburger from "../../public/assets/icons/hamburger.svg";
 import CloseIcon from "../../public/assets/icons/close-icon.svg";
+import NavLink from "./NavLink";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLogoClick = () => {
+    setActiveLink("");
+    closeMenu();
   };
 
   const closeMenu = () => {
@@ -19,8 +26,13 @@ const Header: React.FC = () => {
   };
 
   useEffect(() => {
+    // Retrieve active link from local storage on component mount
+    const storedActiveLink = localStorage.getItem("activeLink");
+    if (storedActiveLink) {
+      setActiveLink(storedActiveLink);
+    }
+
     const handleResize = () => {
-      // close menu when screensize reaches breakpoints
       if (window.innerWidth >= 1024) {
         setMenuOpen(false);
       }
@@ -32,6 +44,11 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Store active link in local storage whenever it changes
+    localStorage.setItem("activeLink", activeLink);
+  }, [activeLink]);
+
   return (
     <div className="relative">
       <nav className="flex items-center justify-between mx-3 h-[83px] lg:h-[145px]">
@@ -41,7 +58,7 @@ const Header: React.FC = () => {
               className="w-[61px] h-[64px] md:w-[85px] md:h-[72px] lg:w-[137px] lg:h-[113px]"
               src={Logo}
               alt="Kings league logo"
-              onClick={closeMenu}
+              onClick={handleLogoClick}
             />
           </Link>
           <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2">
@@ -50,22 +67,42 @@ const Header: React.FC = () => {
             </h2>
           </div>
         </div>
-        <ul className="hidden lg:flex items-center space-x-16 lg:justify-center flex-grow">
-          <Link href={"/games"} className="text-lg font-normal">
+        <ul className="hidden lg:flex items-center space-x-16 lg:justify-center">
+          <NavLink
+            href={"/games"}
+            activeLink={activeLink}
+            setActiveLink={setActiveLink}
+          >
             GAMES
-          </Link>
-          <Link href={"/about"} className="text-lg font-normal">
+          </NavLink>
+          <NavLink
+            href={"/about"}
+            activeLink={activeLink}
+            setActiveLink={setActiveLink}
+          >
             ABOUT US
-          </Link>
-          <Link href={"/players"} className="text-lg font-normal">
+          </NavLink>
+          <NavLink
+            href={"/players"}
+            activeLink={activeLink}
+            setActiveLink={setActiveLink}
+          >
             PLAYERS
-          </Link>
-          <Link href={"/stats"} className="text-lg font-normal">
+          </NavLink>
+          <NavLink
+            href={"/stats"}
+            activeLink={activeLink}
+            setActiveLink={setActiveLink}
+          >
             STATS
-          </Link>
-          <Link href={"/updates"} className="text-lg font-normal">
+          </NavLink>
+          <NavLink
+            href={"/updates"}
+            activeLink={activeLink}
+            setActiveLink={setActiveLink}
+          >
             NEWS & BLOG
-          </Link>
+          </NavLink>
         </ul>
         <Link
           href={""}
