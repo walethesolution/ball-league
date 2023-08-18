@@ -27,13 +27,11 @@ const NavLink: React.FC<NavLinkProps> = ({
         >
           {children}
           {isActive && (
-            <div className="fixed mt-5">
-              <Image
-                src={Net}
-                alt="basketball net"
-                className="w-[20px] h-[20px]"
-              />
-            </div>
+            <Image
+              src={Net}
+              alt="basketball net"
+              className="w-[20px] h-[20px]"
+            />
           )}
         </div>
       </Link>

@@ -26,7 +26,6 @@ const Header: React.FC = () => {
   };
 
   useEffect(() => {
-    // Retrieve active link from local storage on component mount
     const storedActiveLink = localStorage.getItem("activeLink");
     if (storedActiveLink) {
       setActiveLink(storedActiveLink);
