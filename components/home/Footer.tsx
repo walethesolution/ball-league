@@ -26,10 +26,10 @@ const Footer = () => {
           </div>
           <div className="flex flex-col text-[#FFFFFA] text-base font-normal gap-4 lg:flex-row lg:gap-24">
             <div className="flex flex-col gap-4">
-              <Link href="/">About Us</Link>
-              <Link href="/">Contact Us</Link>
-              <Link href="/">News</Link>
-              <Link href="/">Blogs</Link>
+              <Link href="/about">About Us</Link>
+              <Link href="/contact-us">Contact Us</Link>
+              <Link href="/updates">News</Link>
+              <Link href="/updates">Blogs</Link>
             </div>
             <div className="flex flex-col gap-4">
               <Link href="/">Code of conduct</Link>

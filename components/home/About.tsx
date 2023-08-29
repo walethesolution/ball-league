@@ -36,7 +36,7 @@ const About: React.FC = () => {
         competition coming next.
       </p>
       <Link
-        href={""}
+        href={"/about"}
         className="bg-[#2A6041] text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base"
       >
         THE PURPOSE
