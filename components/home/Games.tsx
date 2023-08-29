@@ -18,7 +18,7 @@ const Games = () => {
     >
       {/*First section*/}
       <div className="flex flex-col gap-4">
-        <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
+        <h1 className="text-2xl font-bold border-black md:text-3xl xl:text-5xl">
           UPCOMING GAME
         </h1>
         <h3 className="text-center text-sm md:text-base xl:text-xl">

@@ -7,6 +7,7 @@ import ThreeGuys from "../../public/assets/images/tim-fua-ima.svg";
 import Shooter from "../../public/assets/images/steve-shooter.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import SwiperCore from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,14 +16,12 @@ import "../../styles/hero.css";
 import "../../styles/animations.css";
 
 const Hero: React.FC = () => {
-  const [swiper, setSwiper] = useState<typeof Swiper | null>(null);
+  const [swiper, setSwiper] = useState<SwiperCore | null>(null);
 
-  const customizeSwiperSettings = (swiperInstance: typeof Swiper) => {
+  const customizeSwiperSettings = (swiperInstance: SwiperCore) => {
     if (swiperInstance) {
-      swiperInstance.params.speed = 1000; // Set the transition speed in milliseconds
-      swiperInstance.params.slidesPerView = 1; // Set the number of visible slides
-      swiperInstance.params.effect = "slide"; // Choose the slide effect
-      swiperInstance.params.easing = "ease-in"; // Set the easing effect
+      swiperInstance.params.speed = 2500;
+      swiperInstance.params.slidesPerView = 1;
       swiperInstance.update();
     }
   };

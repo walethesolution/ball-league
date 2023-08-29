@@ -21,7 +21,7 @@ const About: React.FC = () => {
       }`}
     >
       <Image src={Logo} alt="The logo" />
-      <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
+      <h1 className="text-2xl font-bold border-black md:text-3xl xl:text-5xl">
         WHO WE ARE
       </h1>
       <p className="w-full text-center text-[#1F2937] text-base leading-8 font-news font-normal px-4  md:leading-9 md:px-6 xl:text-2xl xl:leading-10">

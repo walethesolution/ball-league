@@ -13,7 +13,7 @@ const Updates: React.FC = () => {
   return (
     <div ref={ref} className={`${isVisible ? "fade-in" : ""}`}>
       <div className="flex flex-col gap-4 items-center justify-center xl:gap-7">
-        <h1 className="text-2xl font-bold border-b-2 border-black md:text-3xl xl:text-5xl">
+        <h1 className="text-2xl font-bold border-black md:text-3xl xl:text-5xl">
           LATEST UPDATES
         </h1>
         <h3 className="text-center text-sm md:text-base xl:text-xl">
