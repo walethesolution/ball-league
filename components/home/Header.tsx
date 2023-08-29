@@ -26,6 +26,8 @@ const Header: React.FC = () => {
   };
 
   useEffect(() => {
+    localStorage.removeItem("activeLink");
+
     const storedActiveLink = localStorage.getItem("activeLink");
     if (storedActiveLink) {
       setActiveLink(storedActiveLink);

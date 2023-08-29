@@ -1,21 +1,43 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import HomeCourt from "../../public/assets/images/home-court.svg";
 import ThreeGuys from "../../public/assets/images/tim-fua-ima.svg";
 import Shooter from "../../public/assets/images/steve-shooter.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 import "../../styles/hero.css";
 import "../../styles/animations.css";
 
 const Hero: React.FC = () => {
+  const [swiper, setSwiper] = useState<typeof Swiper | null>(null);
+
+  const customizeSwiperSettings = (swiperInstance: typeof Swiper) => {
+    if (swiperInstance) {
+      swiperInstance.params.speed = 1000; // Set the transition speed in milliseconds
+      swiperInstance.params.slidesPerView = 1; // Set the number of visible slides
+      swiperInstance.params.effect = "slide"; // Choose the slide effect
+      swiperInstance.params.easing = "ease-in"; // Set the easing effect
+      swiperInstance.update();
+    }
+  };
+
   return (
     <>
-      <Swiper navigation={true} modules={[Navigation]}>
+      <Swiper
+        navigation={true}
+        modules={[Navigation, Autoplay]}
+        autoplay={{ delay: 3000 }}
+        onSwiper={(swiperInstance) => {
+          customizeSwiperSettings(swiperInstance);
+          setSwiper(swiperInstance);
+        }}
+      >
         <SwiperSlide>
           <div className="relative">
             <Image
