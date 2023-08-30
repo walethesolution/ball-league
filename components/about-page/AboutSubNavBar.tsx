@@ -1,13 +1,16 @@
-const AboutSubNavBar = () => {
+import SubNavBarr from "../common/SubNavBarr";
+
+interface AboutSubNavBarProps {
+  setActiveTab: (tab: string) => void;
+}
+
+const AboutSubNavBar: React.FC<AboutSubNavBarProps> = ({ setActiveTab }) => {
+  const items = [
+    { label: "Our mission", tab: "mission" },
+    { label: "History", tab: "history" },
+  ];
   return (
-    <div className="h-[64px] bg-black flex flex-row items-center gap-4 px-6">
-      <div className="text-[#FFFFFA] border-r-2 pr-3">
-        <p className="text-lg">ABOUT US</p>
-      </div>
-      <div className="text-[#FFFFFA]">
-        <p className="text-sm">Our mission</p>
-      </div>
-    </div>
+    <SubNavBarr title="ABOUT US" items={items} setActiveTab={setActiveTab} />
   );
 };
 

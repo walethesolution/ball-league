@@ -32,10 +32,10 @@ const Footer = () => {
               <Link href="/updates">Blogs</Link>
             </div>
             <div className="flex flex-col gap-4">
-              <Link href="/">Code of conduct</Link>
-              <Link href="/">Sponsors</Link>
-              <Link href="/">Events</Link>
-              <Link href="/">Gallery</Link>
+              <Link href="/tbd">Code of conduct</Link>
+              <Link href="/tbd">Sponsors</Link>
+              <Link href="/tbd">Events</Link>
+              <Link href="/tbd">Gallery</Link>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
           <div className="">
             <p className="text-base text-[#FFFFFA] font-medium mb-5 text-center lg:mb-0">
-              (c) 2023 Kings League. All rights reserved
+              &copy; 2023 Kings League. All rights reserved
             </p>
           </div>
         </div>

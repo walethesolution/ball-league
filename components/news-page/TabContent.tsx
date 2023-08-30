@@ -1,15 +1,15 @@
 "use client";
 import { useState } from "react";
-import SubNavBar from "./SubNavBar";
 import NewsPage from "./NewsPage";
 import BlogPage from "./BlogPage";
+import UpdatesSubNavBar from "./UpdatesSubNavBar";
 
 const TabContent = () => {
   const [activeTab, setActiveTab] = useState("news");
 
   return (
     <div>
-      <SubNavBar setActiveTab={setActiveTab} />
+      <UpdatesSubNavBar setActiveTab={setActiveTab} />
       {activeTab === "news" ? <NewsPage /> : null}
       {activeTab === "blog" ? <BlogPage /> : null}
     </div>
