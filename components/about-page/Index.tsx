@@ -7,6 +7,7 @@ import { useState } from "react";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("mission");
+
   return (
     <div>
       <AboutSubNavBar setActiveTab={setActiveTab} />
