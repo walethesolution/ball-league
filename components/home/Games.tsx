@@ -9,6 +9,20 @@ import useFadeInScroll from "@/styles/useFadeInScroll";
 const Games = () => {
   const { ref, isVisible } = useFadeInScroll();
 
+  const currentDate = new Date();
+
+  // Calculating days until next sunday
+  const daysUntilNextSunday = 7 - currentDate.getDay();
+  const nextSunday = new Date(
+    currentDate.getTime() + daysUntilNextSunday * 24 * 60 * 60 * 1000
+  );
+  // Define options for formatting the date
+  const formattedNextSunday = nextSunday.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div
       ref={ref}
@@ -30,7 +44,7 @@ const Games = () => {
       <div className="flex flex-col gap-4 items-center justify-center lg:flex lg:flex-row  lg:gap-16">
         <div className="flex flex-col items-center gap-6 my-4">
           <p className="text-center text-sm font-normal md:text-base xl:text-xl">
-            July 23, 2023
+            {formattedNextSunday}
           </p>
           <GamesDiv />
           <div className="xl:mt-4 flex flex-row gap-4 w-full text-center">
