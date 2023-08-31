@@ -41,12 +41,12 @@ const Games = () => {
       </div>
 
       {/* Second section */}
-      <div className="flex flex-col gap-4 items-center justify-center lg:flex lg:flex-row  lg:gap-16">
+      <div className="flex flex-col gap-4 items-center justify-center mt-10 lg:flex lg:flex-row  lg:gap-16">
         <div className="flex flex-col items-center gap-6 my-4">
           <p className="text-center text-sm font-normal md:text-base xl:text-xl">
             {formattedNextSunday}
           </p>
-          <GamesDiv />
+          <GamesDiv teams={["Team A", "Team B"]} time={"11:00 AM"} />
           <div className="xl:mt-4 flex flex-row gap-4 w-full text-center">
             <div className="flex-grow">
               <Link

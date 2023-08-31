@@ -14,7 +14,7 @@ const WeeklyCalender = () => {
   });
 
   return (
-    <div className="w-[200px] h-[60px] bg-[#EBDCCB] mt-8 text-center flex items-center justify-center font-bold rounded-lg">
+    <div className="w-[200px] h-[60px] bg-[#EBDCCB] mt-8 text-center flex items-center justify-center font-semibold rounded-lg text-lg">
       {formattedNextSunday}
     </div>
   );
