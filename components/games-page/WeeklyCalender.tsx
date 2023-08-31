@@ -26,6 +26,7 @@ const Calender = ({ year, month }: { year: number; month: number }) => {
   const [selectedSunday, setSelectedSunday] = useState<Date | null>(
     sundaysInMonth[4] || null
   );
+
   const datePickerRef = useRef<any>(null);
 
   const handleDateChange = (date: Date | null) => {
