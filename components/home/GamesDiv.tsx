@@ -4,7 +4,7 @@ import Ellipse from "../../public/assets/icons/ellipse.svg";
 const GamesDiv = () => {
   return (
     <div>
-      <div className="w-[347px] h-[177px] bg-[#EBDCCB] flex flex-row items-center justify-center gap-9 font-semibold text-sm md:w-[489px] md:h-[220px] md:text-base md:gap-14 xl:w-[687px] xl:h-[269px] xl:text-xl xl:gap-20">
+      <div className="w-[347px] h-[177px] bg-[#EBDCCB] flex flex-row items-center justify-center gap-9 font-semibold text-sm md:w-[489px] md:h-[220px] md:text-base md:gap-14 xl:w-[687px] xl:h-[269px] xl:text-xl xl:gap-20 rounded-lg">
         <div className="flex flex-col items-center gap-2">
           <Image
             src={Ellipse}
