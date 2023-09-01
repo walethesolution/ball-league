@@ -10,13 +10,13 @@ interface GamesDivProps {
 const GamesDiv: React.FC<GamesDivProps> = ({ teams, time, scores }) => {
   return (
     <div>
-      <div className="w-full h-[177px] bg-[#EBDCCB] flex flex-row items-center justify-center gap-9 font-semibold text-sm px-2 md:w-[489px] md:h-[220px] md:text-base md:gap-14 xl:w-[687px] xl:h-[269px] xl:text-xl xl:gap-20 rounded-lg">
+      <div className="w-full h-full bg-[#EBDCCB] flex flex-row items-center justify-center gap-6 font-semibold text-sm px-4 py-4 md:text-base md:gap-9 xl:text-xl xl:gap-14 rounded-lg">
         <div className="flex gap-4 justify-center items-center">
           <div className="flex flex-col items-center gap-2">
             <Image
               src={Ellipse}
               alt="svg icon"
-              className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] xl:w-[150px] xl:h-[150px]"
+              className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] xl:w-[100px] xl:h-[100px]"
             />
             <p>{teams[0]}</p>
           </div>
@@ -31,7 +31,7 @@ const GamesDiv: React.FC<GamesDivProps> = ({ teams, time, scores }) => {
             <Image
               src={Ellipse}
               alt="svg icon"
-              className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] xl:w-[150px] xl:h-[150px]"
+              className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] xl:w-[100px] xl:h-[100px]"
             />
             <p>{teams[1]}</p>
           </div>
