@@ -1,9 +1,59 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import GamesDiv from "../home/GamesDiv";
 
 const PlayedGames = () => {
   const startDate = new Date("2023-08-13T00:00:00");
   const [currentDate, setCurrentDate] = useState<Date>(startDate);
+  const [selectedDate, setSelectedDate] = useState<Date | null>(startDate);
+  const [stats, setStats] = useState<any[]>([]);
+  const [showStats, setShowStats] = useState(true);
+
+  useEffect(() => {
+    const sampleStats = [
+      {
+        date: "2023-08-13",
+        games: [
+          { teams: ["Team A", "Team B"], scores: [16, 9] },
+          { teams: ["Team A", "Team C"], scores: [11, 7] },
+          { teams: ["Team A", "Team D"], scores: [1, 11] },
+          { teams: ["Team D", "Team E"], scores: [11, 9] },
+          { teams: ["Team D", "Team F"], scores: [8, 11] },
+          { teams: ["Team F", "Team G"], scores: [11, 6] },
+          { teams: ["Team F", "Team H"], scores: [6, 11] },
+        ],
+      },
+      {
+        date: "2023-08-20",
+        games: [
+          { teams: ["Team A", "Team B"], scores: [12, 16] },
+          { teams: ["Team B", "Team C"], scores: [11, 9] },
+        ],
+      },
+      {
+        date: "2023-08-27",
+        games: [
+          { teams: ["Team A", "Team B"], scores: [7, 11] },
+          { teams: ["Team B", "Team C"], scores: [11, 7] },
+          { teams: ["Team B", "Team D"], scores: [11, 7] },
+          { teams: ["Team B", "Team E"], scores: [11, 7] },
+          { teams: ["Team B", "Team F"], scores: [11, 7] },
+          { teams: ["Team F", "Team A"], scores: [11, 7] },
+          { teams: ["Team F", "Team C"], scores: [11, 7] },
+          { teams: ["Team C", "Team D"], scores: [11, 7] },
+        ],
+      },
+    ];
+
+    if (selectedDate) {
+      const formattedDate = selectedDate.toISOString().split("T")[0];
+      const selectedStats = sampleStats.find(
+        (stat) => stat.date === formattedDate
+      );
+      if (selectedStats) {
+        setStats(selectedStats.games);
+      }
+    }
+  }, [selectedDate]);
 
   const formatDate = (date: Date) => {
     return date.toLocaleDateString("en-US", {
@@ -15,7 +65,7 @@ const PlayedGames = () => {
 
   const formatFullDate = (date: Date) => {
     if (!date) {
-      return ""; // Return an empty string if date is null
+      return "";
     }
 
     const formattedDate = formatDate(date);
@@ -37,16 +87,23 @@ const PlayedGames = () => {
   const goToNextSunday = () => {
     const nextSunday = getNextSunday(currentDate || startDate);
     setCurrentDate(nextSunday);
+    setSelectedDate(nextSunday);
   };
 
   const goToPreviousSunday = () => {
     if (currentDate) {
       const previousSunday = getPreviousSunday(currentDate);
       setCurrentDate(previousSunday);
+      setSelectedDate(previousSunday);
     }
   };
 
   const isStartDate = currentDate?.getTime() === startDate.getTime();
+
+  const handleDateClick = () => {
+    setSelectedDate(currentDate);
+    setShowStats(true);
+  };
 
   return (
     <>
@@ -59,7 +116,12 @@ const PlayedGames = () => {
             Prev
           </button>
         )}
-        <div className="w-[200px] h-[60px] bg-[#EBDCCB] text-center flex items-center justify-center font-bold rounded-lg">
+        <div
+          className={`w-[200px] h-[60px] bg-[#EBDCCB] text-center flex items-center justify-center font-bold rounded-lg ${
+            showStats ? "cursor-pointer" : ""
+          }`}
+          onClick={handleDateClick}
+        >
           <p>{formatFullDate(currentDate)}</p>
         </div>
         <button
@@ -70,88 +132,31 @@ const PlayedGames = () => {
         </button>
       </div>
 
-      <div className="text-lg font-medium animate-bounce lg:text-2xl">
-        Team Stats starts officially
-      </div>
+      {showStats && selectedDate && (
+        <div className="text-lg font-medium animate-bounce lg:text-2xl">
+          Team Stats for {formatDate(selectedDate)}:
+        </div>
+      )}
 
-      <div className=" lg:flex lg:flex-wrap lg:justify-center lg:gap-4 xl:gap-6">
-        <table className="border-collapse border border-gray-300 mt-4">
-          <tbody className="">
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">
-                <GamesDiv teams={["Team A", "Team B"]} scores={[16, 9]} />
-              </td>
-              <td className="border border-gray-300 px-4 py-2">FINAL</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table className="border-collapse border border-gray-300 mt-4">
-          <tbody className="">
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">
-                <GamesDiv teams={["Team A", "Team C"]} scores={[11, 7]} />
-              </td>
-              <td className="border border-gray-300 px-4 py-2">FINAL</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table className="border-collapse border border-gray-300 mt-4">
-          <tbody className="">
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">
-                <GamesDiv teams={["Team A", "Team D"]} scores={[1, 11]} />
-              </td>
-              <td className="border border-gray-300 px-4 py-2">FINAL</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table className="border-collapse border border-gray-300 mt-4">
-          <tbody className="">
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">
-                <GamesDiv teams={["Team D", "Team E"]} scores={[11, 9]} />
-              </td>
-              <td className="border border-gray-300 px-4 py-2">FINAL</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table className="border-collapse border border-gray-300 mt-4">
-          <tbody className="">
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">
-                <GamesDiv teams={["Team D", "Team F"]} scores={[11, 8]} />
-              </td>
-              <td className="border border-gray-300 px-4 py-2">FINAL</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table className="border-collapse border border-gray-300 mt-4">
-          <tbody className="">
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">
-                <GamesDiv teams={["Team F", "Team G"]} scores={[11, 6]} />
-              </td>
-              <td className="border border-gray-300 px-4 py-2">FINAL</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table className="border-collapse border border-gray-300 mt-4">
-          <tbody className="">
-            <tr>
-              <td className="border border-gray-300 px-4 py-2">
-                <GamesDiv teams={["Team F", "Team H"]} scores={[6, 11]} />
-              </td>
-              <td className="border border-gray-300 px-4 py-2">FINAL</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      {showStats && (
+        <div className="lg:flex lg:flex-wrap lg:justify-center lg:gap-4 xl:gap-6">
+          {stats.map((game, index) => (
+            <table
+              key={index}
+              className="border-collapse border border-gray-300 mt-4"
+            >
+              <tbody>
+                <tr>
+                  <td className="border border-gray-300 px-4 py-2">
+                    <GamesDiv teams={game.teams} scores={game.scores} />
+                  </td>
+                  <td className="border border-gray-300 px-4 py-2">FINAL</td>
+                </tr>
+              </tbody>
+            </table>
+          ))}
+        </div>
+      )}
     </>
   );
 };
