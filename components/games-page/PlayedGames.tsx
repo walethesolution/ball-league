@@ -11,7 +11,7 @@ const PlayedGames = () => {
         Team Stats starts officially
       </div>
 
-      <div className=" lg:flex lg:flex-wrap lg:justify-center gap-4">
+      <div className=" lg:flex lg:flex-wrap lg:justify-center lg:gap-4 xl:gap-6">
         <table className="border-collapse border border-gray-300 mt-4">
           <tbody className="">
             <tr>
