@@ -1,12 +1,75 @@
+import { useState } from "react";
 import GamesDiv from "../home/GamesDiv";
-import UnplayedGames from "./UnplayedGames";
 
 const PlayedGames = () => {
+  const startDate = new Date("2023-08-13T00:00:00");
+  const [currentDate, setCurrentDate] = useState<Date>(startDate);
+
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  };
+
+  const formatFullDate = (date: Date) => {
+    if (!date) {
+      return ""; // Return an empty string if date is null
+    }
+
+    const formattedDate = formatDate(date);
+    return ` Sun - ${formattedDate}`;
+  };
+
+  const getNextSunday = (date: Date) => {
+    const nextDate = new Date(date);
+    nextDate.setDate(date.getDate() + (7 - date.getDay()));
+    return nextDate;
+  };
+
+  const getPreviousSunday = (date: Date) => {
+    const prevDate = new Date(date);
+    prevDate.setDate(date.getDate() - date.getDay() - 7);
+    return prevDate;
+  };
+
+  const goToNextSunday = () => {
+    const nextSunday = getNextSunday(currentDate || startDate);
+    setCurrentDate(nextSunday);
+  };
+
+  const goToPreviousSunday = () => {
+    if (currentDate) {
+      const previousSunday = getPreviousSunday(currentDate);
+      setCurrentDate(previousSunday);
+    }
+  };
+
+  const isStartDate = currentDate?.getTime() === startDate.getTime();
+
   return (
     <>
-      <div className="w-[200px] h-[60px] bg-[#EBDCCB] mt-8 text-center flex items-center justify-center font-bold rounded-lg">
-        <p>August 13, 2023</p>
+      <div className="flex gap-3 justify-center items-center mt-8">
+        {!isStartDate && (
+          <button
+            onClick={goToPreviousSunday}
+            className="text-sm bg-[#EBDCCB] px-4 py-2 rounded-lg font-medium"
+          >
+            Prev
+          </button>
+        )}
+        <div className="w-[200px] h-[60px] bg-[#EBDCCB] text-center flex items-center justify-center font-bold rounded-lg">
+          <p>{formatFullDate(currentDate)}</p>
+        </div>
+        <button
+          onClick={goToNextSunday}
+          className="text-sm bg-[#EBDCCB] px-4 py-2 rounded-lg font-medium"
+        >
+          Next
+        </button>
       </div>
+
       <div className="text-lg font-medium animate-bounce lg:text-2xl">
         Team Stats starts officially
       </div>
