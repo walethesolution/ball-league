@@ -106,7 +106,7 @@ const Header: React.FC = () => {
           </NavLink>
         </ul>
         <Link
-          href={""}
+          href={"/tbd"}
           className=" hidden lg:block bg-[#2A6041] mr-8 text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-7 xl:py-2.5 xl:text-base"
         >
           Sign up
