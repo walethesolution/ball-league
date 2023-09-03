@@ -37,6 +37,10 @@ const Footer = () => {
               <Link href="/tbd">Events</Link>
               <Link href="/tbd">Gallery</Link>
             </div>
+            <div className="flex flex-col gap-4">
+              <Link href="/tbd">Documentary</Link>
+              <Link href="/tbd">Funny Moments</Link>
+            </div>
           </div>
         </div>
         {/* Line */}

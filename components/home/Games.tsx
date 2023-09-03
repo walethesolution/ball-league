@@ -58,7 +58,7 @@ const Games = () => {
             </div>
             <div className="flex-grow">
               <Link
-                href={""}
+                href={"/tbd"}
                 className="w-full bg-[#3708e4] text-white px-7 py-2.5 text-sm text-center font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base"
               >
                 REGISTER
