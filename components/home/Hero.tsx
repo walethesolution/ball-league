@@ -52,21 +52,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="relative">
-            <Image
-              src={ThreeGuys}
-              alt="Three guys on court"
-              className="w-full h-screen object-cover md:h-full"
-            />
-            <div className="absolute flex justify-center items-center inset-0 mt-[5rem] fade-in">
-              <p className="text-white font-bold text-2xl md:text-3xl text-center lg:text-5xl">
-                EMBRACE THE SPIRIT OF COMPETITION <br /> AND CAMARADARIE
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
+
         <SwiperSlide>
           {" "}
           <div className="relative">
@@ -77,8 +63,7 @@ const Hero: React.FC = () => {
             />
             <div className="absolute flex justify-center items-center inset-0 mt-[4rem] fade-in">
               <p className="text-white font-bold text-2xl md:text-3xl text-center lg:text-5xl">
-                THE SHOOTER&apos;S FORM, <br />
-                TAKE YOUR GAME <br className="md:hidden" /> TO THE NEXT LEVEL
+                EMBRACE THE SPIRIT OF COMPETITION <br /> AND CAMARADARIE
               </p>
             </div>
           </div>
