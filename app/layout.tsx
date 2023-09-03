@@ -1,9 +1,9 @@
 import Header from "@/components/home/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Alegreya } from "next/font/google";
 import Footer from "@/components/home/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const alegreya = Alegreya({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Kings League",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={alegreya.className}>
         <Header />
         {children}
         <Footer />
