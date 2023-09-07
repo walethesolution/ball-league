@@ -14,8 +14,12 @@ const Index = () => {
   return (
     <div>
       <GamesSubNavBar setActiveTab={setActiveTab} />
-      <div className="flex flex-col justify-center items-center gap-8">
-        {activeTab === "ug" ? <UnplayedGames /> : null}
+      <div className="flex flex-col justify-center items-center gap-8 relative">
+        {activeTab === "ug" && (
+          <div className="text-white bg-white w-1/2 h-1/2"></div>
+        ) ? (
+          <UnplayedGames />
+        ) : null}
         {activeTab === "pg" ? <PlayedGames /> : null}
       </div>
     </div>

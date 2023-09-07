@@ -1,49 +1,27 @@
 import { useState, useEffect } from "react";
 import GamesDiv from "../home/GamesDiv";
+import { sampleStats } from "./sampleStats";
+import TbdResults from "./TbdResults";
 
 const PlayedGames = () => {
   const startDate = new Date("2023-08-13T00:00:00");
+  const date = new Date();
+  const daysUntilNextSunday = 7 - date.getDay();
+  const nextSunday = new Date(
+    date.getTime() + daysUntilNextSunday * 24 * 60 * 60 * 1000
+  );
+
   const [currentDate, setCurrentDate] = useState<Date>(startDate);
   const [selectedDate, setSelectedDate] = useState<Date | null>(startDate);
   const [stats, setStats] = useState<any[]>([]);
   const [showStats, setShowStats] = useState(true);
 
-  useEffect(() => {
-    const sampleStats = [
-      {
-        date: "2023-08-13",
-        games: [
-          { teams: ["Team A", "Team B"], scores: [16, 9] },
-          { teams: ["Team A", "Team C"], scores: [11, 7] },
-          { teams: ["Team A", "Team D"], scores: [1, 11] },
-          { teams: ["Team D", "Team E"], scores: [11, 9] },
-          { teams: ["Team D", "Team F"], scores: [8, 11] },
-          { teams: ["Team F", "Team G"], scores: [11, 6] },
-          { teams: ["Team F", "Team H"], scores: [6, 11] },
-        ],
-      },
-      {
-        date: "2023-08-20",
-        games: [
-          { teams: ["Team A", "Team B"], scores: [12, 16] },
-          { teams: ["Team B", "Team C"], scores: [11, 9] },
-        ],
-      },
-      {
-        date: "2023-08-27",
-        games: [
-          { teams: ["Team A", "Team B"], scores: [7, 11] },
-          { teams: ["Team B", "Team C"], scores: [11, 6] },
-          { teams: ["Team B", "Team D"], scores: [11, 8] },
-          { teams: ["Team B", "Team E"], scores: [11, 2] },
-          { teams: ["Team B", "Team F"], scores: [9, 11] },
-          { teams: ["Team F", "Team A"], scores: [6, 5] },
-          { teams: ["Team F", "Team C"], scores: [4, 11] },
-          { teams: ["Team C", "Team D"], scores: [7, 4] },
-        ],
-      },
-    ];
+  const isDateInSampleStats = (date: Date) => {
+    const formattedDate = date.toISOString().split("T")[0];
+    return sampleStats.some((stat) => (stat.date = formattedDate));
+  };
 
+  useEffect(() => {
     if (selectedDate) {
       const formattedDate = selectedDate.toISOString().split("T")[0];
       const selectedStats = sampleStats.find(
@@ -51,6 +29,9 @@ const PlayedGames = () => {
       );
       if (selectedStats) {
         setStats(selectedStats.games);
+        setShowStats(true);
+      } else {
+        setShowStats(false);
       }
     }
   }, [selectedDate]);
@@ -99,6 +80,7 @@ const PlayedGames = () => {
   };
 
   const isStartDate = currentDate?.getTime() === startDate.getTime();
+  const isEndDate = currentDate?.getTime() === nextSunday.getTime();
 
   const handleDateClick = () => {
     setSelectedDate(currentDate);
@@ -124,6 +106,7 @@ const PlayedGames = () => {
         >
           <p>{formatFullDate(currentDate)}</p>
         </div>
+
         <button
           onClick={goToNextSunday}
           className="text-sm bg-[#EBDCCB] px-4 py-2 rounded-lg font-medium"
@@ -138,24 +121,30 @@ const PlayedGames = () => {
         </div>
       )}
 
-      {showStats && (
-        <div className="lg:flex lg:flex-wrap lg:justify-center lg:gap-4 xl:gap-6">
-          {stats.map((game, index) => (
-            <table
-              key={index}
-              className="border-collapse border border-gray-300 mt-4"
-            >
-              <tbody>
-                <tr>
-                  <td className="border border-gray-300 px-4 py-2">
-                    <GamesDiv teams={game.teams} scores={game.scores} />
-                  </td>
-                  <td className="border border-gray-300 px-4 py-2">FINAL</td>
-                </tr>
-              </tbody>
-            </table>
-          ))}
-        </div>
+      {showStats ? (
+        isEndDate ? (
+          <TbdResults />
+        ) : (
+          <div className="lg:flex lg:flex-wrap lg:justify-center lg:gap-4 xl:gap-6">
+            {stats.map((game, index) => (
+              <table
+                key={index}
+                className="border-collapse border border-gray-300 mt-4"
+              >
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-300 px-4 py-2">
+                      <GamesDiv teams={game.teams} scores={game.scores} />
+                    </td>
+                    <td className="border border-gray-300 px-4 py-2">FINAL</td>
+                  </tr>
+                </tbody>
+              </table>
+            ))}
+          </div>
+        )
+      ) : (
+        <TbdResults />
       )}
     </>
   );

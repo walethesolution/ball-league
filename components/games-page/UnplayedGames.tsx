@@ -1,6 +1,5 @@
 import Link from "next/link";
 import GamesDiv from "../home/GamesDiv";
-import GameGrounds from "./GameGrounds";
 import WeeklyCalender from "./WeeklyCalender";
 
 const UnplayedGames = () => {
