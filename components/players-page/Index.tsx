@@ -1,7 +1,7 @@
 "use client";
 
-import PlayerCards from "./PlayerCards";
 import PlayerSubNavBar from "./PlayerSubNavBar";
+import PlayerTable from "./PlayerTable";
 import Roster from "./Roster";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ const Index = () => {
       <PlayerSubNavBar setActiveTab={setActiveTab} />
       <div className="flex flex-col gap-4">
         <Roster />
-        <PlayerCards />
+        <PlayerTable />
       </div>
     </div>
   );
