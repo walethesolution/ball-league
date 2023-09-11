@@ -159,6 +159,15 @@ const PlayerTable: React.FC = () => {
     setPage(1);
   }, []);
 
+  const handleNameColumn = (selectedKeys: Selection) => {
+    const selectedKeysArray = Array.from(selectedKeys);
+
+    if (!selectedKeysArray.includes("name")) {
+      selectedKeysArray.push("name");
+    }
+    setVisibleColumns(new Set(selectedKeysArray));
+  };
+
   const topContent = useMemo(() => {
     return (
       <div className="flex flex-col gap-4 py-2 px-4">
@@ -215,7 +224,7 @@ const PlayerTable: React.FC = () => {
                 closeOnSelect={false}
                 selectedKeys={visibleColumns}
                 selectionMode="multiple"
-                onSelectionChange={setVisibleColumns}
+                onSelectionChange={handleNameColumn}
                 className="bg-[#D9D9D9] rounded-lg"
               >
                 {columns.map((column) => (
