@@ -6,11 +6,11 @@ import SubNavBar from "./SubNavBar";
 import UnderConstruction from "../common/UnderConstruction";
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState("stats");
+  const [activeTab, setActiveTab] = useState("allStats");
 
   return (
     <div className="flex flex-col">
-      <SubNavBar setActiveTab={setActiveTab} />
+      <SubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
       <div className="flex flex-col justify-center items-center gap-4 flex-grow ">
         <UnderConstruction />
         <div>
