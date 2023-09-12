@@ -52,11 +52,11 @@ const Header: React.FC = () => {
 
   return (
     <div className="relative">
-      <nav className="flex items-center justify-between mx-3 h-[83px] lg:h-[145px]">
+      <nav className="flex items-center justify-between mx-3 h-[85px] ">
         <div className="flex items-center">
           <Link href={"/"}>
             <Image
-              className="w-[61px] h-[64px] md:w-[85px] md:h-[72px] lg:w-[137px] lg:h-[113px]"
+              className="w-[61px] h-[64px] md:w-[85px] md:h-[72px]"
               src={Logo}
               alt="Kings league logo"
               onClick={handleLogoClick}

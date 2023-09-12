@@ -1,10 +1,7 @@
 "use client";
 
-import GamesDiv from "../home/GamesDiv";
-import GameGrounds from "./GameGrounds";
 import GamesSubNavBar from "./GamesSubNavBar";
 import { useState } from "react";
-import WeeklyCalender from "./WeeklyCalender";
 import UnplayedGames from "./UnplayedGames";
 import PlayedGames from "./PlayedGames";
 
@@ -13,9 +10,13 @@ const Index = () => {
 
   return (
     <div>
-      <GamesSubNavBar setActiveTab={setActiveTab} />
-      <div className="flex flex-col justify-center items-center gap-8">
-        {activeTab === "ug" ? <UnplayedGames /> : null}
+      <GamesSubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
+      <div className="flex flex-col justify-center items-center gap-8 relative">
+        {activeTab === "ug" && (
+          <div className="text-white bg-white w-1/2 h-1/2"></div>
+        ) ? (
+          <UnplayedGames />
+        ) : null}
         {activeTab === "pg" ? <PlayedGames /> : null}
       </div>
     </div>

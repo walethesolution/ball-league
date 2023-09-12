@@ -2,12 +2,14 @@ interface SubNavBarrProps {
   title: string;
   items: { label: string; tab: string }[];
   setActiveTab: (tab: string) => void;
+  activeTab: string;
 }
 
 const SubNavBarr: React.FC<SubNavBarrProps> = ({
   title,
   items,
   setActiveTab,
+  activeTab,
 }) => {
   return (
     <div>
@@ -21,7 +23,12 @@ const SubNavBarr: React.FC<SubNavBarrProps> = ({
             onClick={() => setActiveTab(item.tab)}
             key={item.tab}
           >
-            <p className="text-sm">{item.label}</p>
+            <div className="flex relative">
+              {item.label}
+              {activeTab === item.tab && (
+                <div className="ml-auto mt-1 w-10 h-1 bg-white rounded-full absolute transform translate-y-5 flex "></div>
+              )}
+            </div>
           </div>
         ))}
       </div>

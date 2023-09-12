@@ -1,18 +1,18 @@
 "use client";
 
 import Why from "./Why";
-import Members from "./Members";
 import AboutSubNavBar from "./AboutSubNavBar";
 import { useState } from "react";
+import GameGrounds from "../games-page/GameGrounds";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("mission");
 
   return (
     <div>
-      <AboutSubNavBar setActiveTab={setActiveTab} />
+      <AboutSubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
       <Why />
-      <Members />
+      <GameGrounds />
     </div>
   );
 };
