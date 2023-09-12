@@ -9,7 +9,7 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("ap");
   return (
     <div>
-      <PlayerSubNavBar setActiveTab={setActiveTab} />
+      <PlayerSubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
       <div className="flex flex-col gap-4">
         <Roster />
         <PlayerTable />

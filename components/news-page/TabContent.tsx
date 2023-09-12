@@ -9,7 +9,7 @@ const TabContent = () => {
 
   return (
     <div>
-      <UpdatesSubNavBar setActiveTab={setActiveTab} />
+      <UpdatesSubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
       {activeTab === "news" ? <NewsPage /> : null}
       {activeTab === "blog" ? <BlogPage /> : null}
     </div>

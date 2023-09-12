@@ -3,10 +3,12 @@ import SubNavBarr from "../common/SubNavBarr";
 
 interface UpdatesSubNavBarProps {
   setActiveTab: (tab: string) => void;
+  activeTab: string;
 }
 
 const UpdatesSubNavBar: React.FC<UpdatesSubNavBarProps> = ({
   setActiveTab,
+  activeTab,
 }) => {
   const items = [
     { label: "News", tab: "news" },
@@ -14,7 +16,12 @@ const UpdatesSubNavBar: React.FC<UpdatesSubNavBarProps> = ({
   ];
 
   return (
-    <SubNavBarr title="UPDATES" items={items} setActiveTab={setActiveTab} />
+    <SubNavBarr
+      title="UPDATES"
+      items={items}
+      setActiveTab={setActiveTab}
+      activeTab={activeTab}
+    />
   );
 };
 
