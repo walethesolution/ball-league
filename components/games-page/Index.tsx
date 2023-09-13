@@ -2,8 +2,8 @@
 
 import GamesSubNavBar from "./GamesSubNavBar";
 import { useState } from "react";
-import UnplayedGames from "./UnplayedGames";
 import PlayedGames from "./PlayedGames";
+import UpcomingGames from "./UpcomingGames";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("ug");
@@ -15,7 +15,7 @@ const Index = () => {
         {activeTab === "ug" && (
           <div className="text-white bg-white w-1/2 h-1/2"></div>
         ) ? (
-          <UnplayedGames />
+          <UpcomingGames />
         ) : null}
         {activeTab === "pg" ? <PlayedGames /> : null}
       </div>

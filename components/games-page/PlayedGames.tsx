@@ -15,10 +15,15 @@ const PlayedGames = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(startDate);
   const [stats, setStats] = useState<any[]>([]);
   const [showStats, setShowStats] = useState(true);
+  const [showPlayerNames, setShowPlayerNames] = useState<boolean[]>(
+    Array(stats.length).fill(false)
+  );
 
-  const isDateInSampleStats = (date: Date) => {
-    const formattedDate = date.toISOString().split("T")[0];
-    return sampleStats.some((stat) => (stat.date = formattedDate));
+  const handlePlayersClick = (gameIndex: number) => {
+    // Toggle the state for the clicked game
+    const updatedShowPlayerNames = [...showPlayerNames];
+    updatedShowPlayerNames[gameIndex] = !updatedShowPlayerNames[gameIndex];
+    setShowPlayerNames(updatedShowPlayerNames);
   };
 
   useEffect(() => {
@@ -106,7 +111,6 @@ const PlayedGames = () => {
         >
           <p>{formatFullDate(currentDate)}</p>
         </div>
-
         <button
           onClick={goToNextSunday}
           className="text-sm bg-[#EBDCCB] px-4 py-2 rounded-lg font-medium"
@@ -133,8 +137,35 @@ const PlayedGames = () => {
               >
                 <tbody>
                   <tr>
-                    <td className="border border-gray-300 px-4 py-2">
-                      <GamesDiv teams={game.teams} scores={game.scores} />
+                    <td className="border border-gray-300 px-4 py-2 flex flex-col gap-2">
+                      <GamesDiv
+                        teams={game.teams}
+                        scores={game.scores}
+                        players={game.players}
+                      />
+                      {/* Conditionally render player names based on the state */}
+                      {showPlayerNames[index] && (
+                        <div className="flex justify-between mx-4">
+                          <div>
+                            <p>{game.players[0][0]}</p>
+                            <p>{game.players[0][1]}</p>
+                            <p>{game.players[0][2]}</p>
+                          </div>
+                          <div>
+                            <p>{game.players[1][0]}</p>
+                            <p>{game.players[1][1]}</p>
+                            <p>{game.players[1][2]}</p>
+                          </div>
+                        </div>
+                      )}
+                      <button
+                        className=" border-t-2 font-medium hover:bg-slate-100 text-center"
+                        onClick={() => handlePlayersClick(index)}
+                      >
+                        {!showPlayerNames[index]
+                          ? "View Players"
+                          : "Close players"}
+                      </button>
                     </td>
                     <td className="border border-gray-300 px-4 py-2">FINAL</td>
                   </tr>
