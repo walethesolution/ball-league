@@ -10,7 +10,11 @@ const GameGrounds = () => {
       </h1>
       <div className="flex flex-col gap-6 lg:flex lg:flex-row lg:gap-2 lg:mx-12">
         <div className="flex flex-col items-center text-left gap-2 mx-16 lg:mx-6">
-          <Image src={PS213} alt="our home court PS213" />
+          <Image
+            src={PS213}
+            alt="our home court PS213"
+            className="rounded-lg"
+          />
           <h2 className="font-semibold">PS 213</h2>
           <p>
             This is where it all started. <br /> The dream, The Idea. <br /> The
@@ -18,7 +22,11 @@ const GameGrounds = () => {
           </p>
         </div>
         <div className="flex flex-col items-center text-left gap-2 mx-16 lg:mx-6">
-          <Image src={Gersh} alt="our away court Gersh" />
+          <Image
+            src={Gersh}
+            alt="our away court Gersh"
+            className="rounded-lg"
+          />
           <h2 className="font-semibold">GERSH</h2>
           <p>
             This is the go-to place. <br /> The Community, The Feel. <br /> The

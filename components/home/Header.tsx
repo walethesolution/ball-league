@@ -51,7 +51,7 @@ const Header: React.FC = () => {
   }, [activeLink]);
 
   return (
-    <div className="relative">
+    <div className="fixed w-full top-0 z-[9999] bg-[#FFFFFA] shadow-lg opacity-90">
       <nav className="flex items-center justify-between mx-3 h-[85px] ">
         <div className="flex items-center">
           <Link href={"/"}>
