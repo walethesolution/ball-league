@@ -9,10 +9,12 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("mission");
 
   return (
-    <div>
+    <div className="pt-20 lg:pt-22">
       <AboutSubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
+      <div className="pt-20 lg:pt-22">
       <Why />
       <GameGrounds />
+      </div>
     </div>
   );
 };

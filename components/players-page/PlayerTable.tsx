@@ -171,7 +171,7 @@ const PlayerTable: React.FC = () => {
   const topContent = useMemo(() => {
     return (
       <div className="flex flex-col gap-4 py-2 px-4">
-        <div className="flex flex-col justify-center gap-3 items-end lg:flex-row">
+        <div className="flex flex-col justify-center gap-3 items-end lg:flex-row ">
           <Input
             isClearable
             className="w-3/4 lg:w-1/2 bg-[#D9D9D9] rounded-lg px-1 py-2"
@@ -181,11 +181,11 @@ const PlayerTable: React.FC = () => {
             onClear={() => onClear()}
             onValueChange={onSearchChange}
           />
-          <div className="flex gap-3">
+          <div className="flex gap-2">
             <Dropdown>
               <DropdownTrigger className="flex gap-2">
                 <Button
-                  endContent={<ChevronDownIcon className="text-small" />}
+                  endContent={<ChevronDownIcon className="text-small"/>}
                   variant="flat"
                   className="w-full bg-[#D9D9D9] rounded-lg px-2 py-2"
                 >
@@ -213,7 +213,7 @@ const PlayerTable: React.FC = () => {
                 <Button
                   endContent={<ChevronDownIcon className="text-small" />}
                   variant="flat"
-                  className="w-full bg-[#D9D9D9] rounded-lg px-2 py-2"
+                  className="w-full bg-[#D9D9D9] rounded-lg px-2 py-2 "
                 >
                   Columns
                 </Button>

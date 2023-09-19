@@ -7,7 +7,7 @@ import Updates from "./Updates";
 
 const Index = () => {
   return (
-    <>
+    <div className="pt-20 lg:pt-22">
       <Hero />
       <div className="flex flex-col gap-28">
         <About />
@@ -15,7 +15,7 @@ const Index = () => {
         <Welcome />
         <Updates />
       </div>
-    </>
+    </div>
   );
 };
 
