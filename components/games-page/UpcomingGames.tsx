@@ -3,7 +3,7 @@ import GamesDiv from "../home/GamesDiv";
 import WeeklyCalender from "./WeeklyCalender";
 import Court from "./Court";
 
-const UnplayedGames = () => {
+const UpcomingGames = () => {
   return (
     <div className="flex flex-col justify-center items-center ">
       <div className="flex flex-col gap-4 mx-auto">
@@ -25,4 +25,4 @@ const UnplayedGames = () => {
   );
 };
 
-export default UnplayedGames;
+export default UpcomingGames;

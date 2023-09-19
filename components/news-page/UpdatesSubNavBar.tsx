@@ -16,12 +16,14 @@ const UpdatesSubNavBar: React.FC<UpdatesSubNavBarProps> = ({
   ];
 
   return (
-    <SubNavBarr
-      title="UPDATES"
-      items={items}
-      setActiveTab={setActiveTab}
-      activeTab={activeTab}
-    />
+    <div className="fixed w-full top-20 z-[9998]">
+      <SubNavBarr
+        title="UPDATES"
+        items={items}
+        setActiveTab={setActiveTab}
+        activeTab={activeTab}
+      />
+    </div>
   );
 };
 

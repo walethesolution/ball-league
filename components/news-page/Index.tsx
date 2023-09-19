@@ -2,7 +2,7 @@ import TabContent from "./TabContent";
 
 const Index = () => {
   return (
-    <div>
+    <div className="pt-20 lg:pt-22">
       <TabContent />
     </div>
   );

@@ -8,11 +8,12 @@ const TabContent = () => {
   const [activeTab, setActiveTab] = useState("news");
 
   return (
-    <div>
+    <>
       <UpdatesSubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
-      {activeTab === "news" ? <NewsPage /> : null}
-      {activeTab === "blog" ? <BlogPage /> : null}
-    </div>
+      <div className="pt-20 lg:pt-22">
+      {activeTab === "news" ? <NewsPage /> : <BlogPage />}
+      </div>
+    </>
   );
 };
 

@@ -51,8 +51,9 @@ const Header: React.FC = () => {
   }, [activeLink]);
 
   return (
-    <div className="relative">
-      <nav className="flex items-center justify-between mx-3 h-[85px] ">
+    <div>
+    <div className="w-full fixed z-[9999] bg-[#FFFFFA] shadow-lg">
+      <nav className="flex items-center justify-between mx-3 h-[85px]">
         <div className="flex items-center">
           <Link href={"/"}>
             <Image
@@ -119,8 +120,9 @@ const Header: React.FC = () => {
           )}
         </div>
       </nav>
+      </div>
       {menuOpen && (
-        <div className="absolute right-0 w-3/4 top-[83px] p-2 shadow z-[9999] bg-[#FFFFFA] h-screen ">
+        <div className="fixed right-0 w-3/4 top-[80px] p-2 shadow bg-[#FFFFFA] h-screen z-[9999]">
           <ul className="flex flex-col mx-4 gap-4">
             <Link
               href={"/games"}

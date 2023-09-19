@@ -14,12 +14,14 @@ const SubNavBar: React.FC<SubNavBarProps> = ({ setActiveTab, activeTab }) => {
   ];
 
   return (
-    <SubNavBarr
-      title="STATS"
-      items={items}
-      setActiveTab={setActiveTab}
-      activeTab={activeTab}
-    />
+    <div className="fixed w-full top-20 z-[9998]">
+      <SubNavBarr
+        title="STATS"
+        items={items}
+        setActiveTab={setActiveTab}
+        activeTab={activeTab}
+      />
+    </div>
   );
 };
 

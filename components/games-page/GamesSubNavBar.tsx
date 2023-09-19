@@ -11,17 +11,19 @@ const GamesSubNavBar: React.FC<GamesSubNavBarProps> = ({
   activeTab,
 }) => {
   const items = [
-    { label: "Unplayed games", tab: "ug" },
+    { label: "Upcoming games", tab: "ug" },
     { label: "Played games", tab: "pg" },
   ];
 
   return (
-    <SubNavBarr
-      title="GAMES"
-      items={items}
-      setActiveTab={setActiveTab}
-      activeTab={activeTab}
-    />
+    <div className="fixed w-full top-20 z-[9998]">
+      <SubNavBarr
+        title="GAMES"
+        items={items}
+        setActiveTab={setActiveTab}
+        activeTab={activeTab}
+      />
+    </div>
   );
 };
 

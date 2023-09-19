@@ -13,7 +13,7 @@ const SubNavBarr: React.FC<SubNavBarrProps> = ({
 }) => {
   return (
     <div>
-      <div className="h-[64px] bg-black flex flex-row items-center gap-4 px-6">
+      <div className=" h-[64px] bg-black flex flex-row items-center gap-4 px-6">
         <div className="text-[#FFFFFA] border-r-2 pr-3">
           <p className="text-lg">{title}</p>
         </div>

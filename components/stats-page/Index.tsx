@@ -9,7 +9,7 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("allStats");
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pt-20 lg:pt-22">
       <SubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
       <div className="flex flex-col justify-center items-center gap-4 flex-grow ">
         <UnderConstruction />
