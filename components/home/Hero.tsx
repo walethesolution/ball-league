@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       <Image
         src={HomeCourt}
         alt="this is home court"
-        className="w-full h-screen object-cover md:h-full"
+        className="w-full h-screen object-cover"
       />
       <div className="absolute inset-0 flex justify-center items-center mt-[3rem] fade-in">
         <p className="text-white font-bold text-2xl md:text-3xl text-center lg:text-5xl">
