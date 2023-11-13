@@ -11,7 +11,6 @@ const Index = () => {
     <div className="pt-20 lg:pt-22">
       <Hero />
       <div className="flex flex-col gap-28">
-        <Highlights />
         <About />
         <Games />
         <Welcome />
