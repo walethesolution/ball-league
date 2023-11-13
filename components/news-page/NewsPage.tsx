@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import MiamiCourt from "../../public/assets/images/maimi-view-ct.svg";
-import RodgeCourt from "../../public/assets/images/rodg-n-ct.svg";
+import MiamiCourt from "../../public/assets/images/blog1.png";
+import Steve from "../../public/assets/images/steveShooter.png";
 
 const NewsPage: React.FC = () => {
   return (
@@ -41,11 +41,7 @@ const NewsPage: React.FC = () => {
         </div>
         <div className="flex flex-col gap-4 mx-4 md:items-stretch md:flex-row lg:mx-8 lg:gap-8 xl:gap-14">
           <div className="md:w-1/2">
-            <Image
-              src={RodgeCourt}
-              alt="Rodge in court"
-              className="rounded-lg"
-            />
+            <Image src={Steve} alt="Rodge in court" className="rounded-lg" />
           </div>
           <div className="flex flex-col gap-4 md:w-1/2 md:gap-2 lg:justify-center lg:items-center xl:gap-10">
             <h2 className="text-lg font-semibold lg:text-xl xl:text-2xl">

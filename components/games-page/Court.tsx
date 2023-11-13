@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Court213 from "../../public/assets/images/maimi-view-ct.svg";
+import Court213 from "../../public/assets/images/blog1.png";
 
 const Court = () => {
   return (

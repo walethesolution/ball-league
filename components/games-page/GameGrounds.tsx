@@ -1,6 +1,6 @@
 import Image from "next/image";
-import PS213 from "../../public/assets/images/ps213.svg";
-import Gersh from "../../public/assets/images/gersh.svg";
+import PS213 from "../../public/assets/images/pS.png";
+import Gersh from "../../public/assets/images/Gersh.png";
 
 const GameGrounds = () => {
   return (

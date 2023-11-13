@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import MiamiCourt from "../../public/assets/images/maimi-view-ct.svg";
-import RodgeCourt from "../../public/assets/images/rodg-n-ct.svg";
+import MiamiCourt from "../../public/assets/images/blog1.png";
+import SteveShooter from "../../public/assets/images/steveShooter.png";
 import "../../styles/animations.css";
 import useFadeInScroll from "@/styles/useFadeInScroll";
 
@@ -46,7 +46,7 @@ const Updates: React.FC = () => {
         </div>
         <div className="flex flex-col gap-4 mx-4 md:items-stretch md:flex-row-reverse lg:mx-8 lg:gap-8 xl:gap-14">
           <div className="md:w-1/2">
-            <Image src={RodgeCourt} alt="Rodge in court" />
+            <Image src={SteveShooter} alt="Rodge in court" />
           </div>
           <div className="flex flex-col gap-4 md:w-1/2 md:gap-2 lg:justify-center lg:items-center xl:gap-8">
             <h2 className="text-lg font-semibold lg:text-xl xl:text-2xl">
@@ -58,7 +58,7 @@ const Updates: React.FC = () => {
               eget placerat lectus. Curabitur rutrum dui in sollicitudin tempus.
             </p>
             <p>
-              August 13, 2023
+              November 13, 2023
               <br />
               Written by: <span>Wale</span>
             </p>

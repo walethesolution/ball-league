@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import Sammy from "../../public/assets/images/sammy.svg";
-import Shooter from "../../public/assets/images/steve-shooter.svg";
+import Sammy from "../../public/assets/images/sammy.png";
+import Shooter from "../../public/assets/images/steveShooter.png";
 
 const BlogPage: React.FC = () => {
   return (
