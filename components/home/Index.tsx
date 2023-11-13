@@ -4,7 +4,6 @@ import About from "./About";
 import Games from "./Games";
 import Welcome from "./Welcome";
 import Updates from "./Updates";
-import Highlights from "../highlights/Highlights";
 
 const Index = () => {
   return (
