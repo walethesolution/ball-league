@@ -107,10 +107,10 @@ const Header: React.FC = () => {
             </NavLink>
           </ul>
           <Link
-            href={"/register"}
+            href={"/login"}
             className=" hidden lg:block bg-[#2A6041] mr-8 text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-7 xl:py-2.5 xl:text-base"
           >
-            Sign up
+            Log in
           </Link>
           <div className="lg:hidden cursor-pointer" onClick={handleMenuToggle}>
             {menuOpen ? (
@@ -161,11 +161,11 @@ const Header: React.FC = () => {
             </Link>
           </ul>
           <Link
-            href={"/register"}
+            href={"login"}
             className="bg-[#2A6041] text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-7 xl:py-2.5 xl:text-base flex items-center justify-center"
             onClick={closeMenu}
           >
-            Sign up
+            Log in
           </Link>
         </div>
       )}

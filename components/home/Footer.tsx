@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="flex flex-col text-[#FFFFFA] text-base font-normal gap-4 lg:flex-row lg:gap-24">
             <div className="flex flex-col gap-4">
               <Link href="/about">About Us</Link>
-              <Link href="/contact-us">Contact Us</Link>
+              <Link href="/tbd">Contact Us</Link>
               <Link href="/updates">News</Link>
               <Link href="/updates">Blogs</Link>
             </div>
@@ -49,33 +49,63 @@ const Footer = () => {
         {/* Icon and copyright  */}
         <div className="flex flex-col gap-4 lg:flex-row-reverse lg:items-center lg:mb-10 lg:justify-between">
           <div className="flex flex-row justify-center gap-6">
-            <Image
-              src={Youtube}
-              alt="Youtube icon"
-              className="w-[30px] h-[30px]"
-            />
-            <Image
-              src={Facebook}
-              alt="Facebook icon"
-              className="w-[30px] h-[30px]"
-            />
-            <Image
-              src={Twitter}
-              alt="Twitter icon"
-              className="w-[30px] h-[30px]"
-            />
-            <Image
-              src={Instagram}
-              alt="Instagram icon"
-              className="w-[30px] h-[30px]"
-            />
-            <Image
-              src={Whatsapp}
-              alt="Whatsapp icon"
-              className="w-[30px] h-[30px]"
-            />
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={Youtube}
+                alt="Youtube icon"
+                className="w-[30px] h-[30px]"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={Facebook}
+                alt="Facebook icon"
+                className="w-[30px] h-[30px]"
+              />
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={Twitter}
+                alt="Twitter icon"
+                className="w-[30px] h-[30px]"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={Instagram}
+                alt="Instagram icon"
+                className="w-[30px] h-[30px]"
+              />
+            </a>
+            <a
+              href="https://www.whatsapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={Whatsapp}
+                alt="Whatsapp icon"
+                className="w-[30px] h-[30px]"
+              />
+            </a>
           </div>
-          <div className="">
+          <div>
             <p className="text-base text-[#FFFFFA] font-medium mb-5 text-center lg:mb-0">
               &copy; 2023 Kings League. All rights reserved
             </p>
