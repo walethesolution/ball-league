@@ -43,67 +43,74 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* Line */}
         <Image src={Line} alt="A straight line" className="mt-10 w-full" />
 
-        {/* Icon and copyright  */}
         <div className="flex flex-col gap-4 lg:flex-row-reverse lg:items-center lg:mb-10 lg:justify-between">
-          <div className="flex flex-row justify-center gap-6">
-            <a
-              href="https://www.youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={Youtube}
-                alt="Youtube icon"
-                className="w-[30px] h-[30px]"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={Facebook}
-                alt="Facebook icon"
-                className="w-[30px] h-[30px]"
-              />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={Twitter}
-                alt="Twitter icon"
-                className="w-[30px] h-[30px]"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={Instagram}
-                alt="Instagram icon"
-                className="w-[30px] h-[30px]"
-              />
-            </a>
-            <a
-              href="https://www.whatsapp.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={Whatsapp}
-                alt="Whatsapp icon"
-                className="w-[30px] h-[30px]"
-              />
-            </a>
+          <div className="flex flex-col items-left justify-center gap-3">
+            <div className="flex flex-col gap-2 text-white">
+              <h3 className="font-bold ">Follow Us</h3>
+              <p className="text-wrap">
+                Stay up to date with our community events, <br />
+                game highlights, and more by following us on social media.
+              </p>
+            </div>
+            <div className="flex flex-row justify-left gap-6">
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={Youtube}
+                  alt="Youtube icon"
+                  className="w-[30px] h-[30px]"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={Facebook}
+                  alt="Facebook icon"
+                  className="w-[30px] h-[30px]"
+                />
+              </a>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={Twitter}
+                  alt="Twitter icon"
+                  className="w-[30px] h-[30px]"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={Instagram}
+                  alt="Instagram icon"
+                  className="w-[30px] h-[30px]"
+                />
+              </a>
+              <a
+                href="https://www.whatsapp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={Whatsapp}
+                  alt="Whatsapp icon"
+                  className="w-[30px] h-[30px]"
+                />
+              </a>
+            </div>
           </div>
           <div>
             <p className="text-base text-[#FFFFFA] font-medium mb-5 text-center lg:mb-0">
