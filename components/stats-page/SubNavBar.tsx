@@ -7,7 +7,7 @@ interface SubNavBarProps {
 
 const SubNavBar: React.FC<SubNavBarProps> = ({ setActiveTab, activeTab }) => {
   const items = [
-    { label: "All Stats", tab: "allStats" },
+    { label: "Overall", tab: "allStats" },
     { label: "Points", tab: "points" },
     { label: "Assists", tab: "assists" },
     { label: "Rebounds", tab: "rebounds" },
