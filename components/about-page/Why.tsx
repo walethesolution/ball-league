@@ -31,13 +31,6 @@ const Why = () => {
           </div>
           <div>
             <p>
-              Our league is committed to leading the youth, helping them channel
-              their emotions and energies constructively, reducing negative
-              behaviors such as crime and emotional outbursts.
-            </p>
-          </div>
-          <div>
-            <p>
               We firmly believe in giving our community a voice and a stage,
               empowering individuals in the spirit of brotherhood and creating a
               sense of purpose and unity.

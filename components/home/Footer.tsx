@@ -45,10 +45,16 @@ const Footer = () => {
         </div>
         <Image src={Line} alt="A straight line" className="mt-10 w-full" />
 
-        <div className="flex flex-col gap-4 lg:flex-row-reverse lg:items-center lg:mb-10 lg:justify-between">
+        <div className="flex flex-col gap-6 lg:flex-row-reverse lg:items-center lg:mb-10 lg:justify-between">
+          <div className="flex flex-col gap-3 text-white">
+            <h3 className="font-bold text-xl">Get in Touch</h3>
+            <p>PS 213, Brooklyn NY, 11207.</p>
+            <p>+1-(888)-123-4567</p>
+            <p>info@kingsleaguebasketball.com</p>
+          </div>
           <div className="flex flex-col items-left justify-center gap-3">
             <div className="flex flex-col gap-2 text-white">
-              <h3 className="font-bold ">Follow Us</h3>
+              <h3 className="font-bold text-xl">Follow Us</h3>
               <p className="text-wrap">
                 Stay up to date with our community events, <br />
                 game highlights, and more by following us on social media.

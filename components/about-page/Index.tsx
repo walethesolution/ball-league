@@ -4,6 +4,7 @@ import Why from "./Why";
 import AboutSubNavBar from "./AboutSubNavBar";
 import { useState } from "react";
 import GameGrounds from "../games-page/GameGrounds";
+import Members from "./Members";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("mission");
@@ -12,8 +13,8 @@ const Index = () => {
     <div className="pt-20 lg:pt-22">
       <AboutSubNavBar setActiveTab={setActiveTab} activeTab={activeTab} />
       <div className="pt-20 lg:pt-22">
-      <Why />
-      <GameGrounds />
+        <Why />
+        <Members />
       </div>
     </div>
   );
