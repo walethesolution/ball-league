@@ -10,8 +10,8 @@ const Images = () => {
             <Image
               isBlurred
               width={240}
-              src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
-              alt="NextUI Album Cover"
+              src=""
+              alt="Olawale Photo"
               className=""
             />
             <h1 className="text-center text-lg font-medium">
@@ -27,8 +27,8 @@ const Images = () => {
             <Image
               isBlurred
               width={240}
-              src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
-              alt="NextUI Album Cover"
+              src=""
+              alt="Dariel Photo"
               className=""
             />
             <h1 className="text-center text-lg font-medium">Dariel Soriano</h1>
@@ -42,8 +42,8 @@ const Images = () => {
             <Image
               isBlurred
               width={240}
-              src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
-              alt="NextUI Album Cover"
+              src=""
+              alt="Elias photo"
               className=""
             />
             <h1 className="text-center text-lg font-medium">Elias Perez</h1>
@@ -54,13 +54,7 @@ const Images = () => {
       <div className="">
         <Card className="flex border">
           <CardBody className="flex gap-2">
-            <Image
-              isBlurred
-              width={240}
-              src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
-              alt="NextUI Album Cover"
-              className=""
-            />
+            <Image isBlurred width={240} src="" alt="Will Photo" className="" />
             <h1 className="text-center text-lg font-medium">Will Champion</h1>
             <p className="text-center">Community Outreach Director</p>
           </CardBody>
@@ -69,13 +63,7 @@ const Images = () => {
       <div className="">
         <Card className="flex border">
           <CardBody className="flex gap-2">
-            <Image
-              isBlurred
-              width={240}
-              src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
-              alt="NextUI Album Cover"
-              className=""
-            />
+            <Image isBlurred width={240} src="" alt="Alex Photo" className="" />
             <h1 className="text-center text-lg font-medium">Alexander Odita</h1>
             <p className="text-center">Chief Marketing Officer</p>
           </CardBody>
@@ -87,8 +75,8 @@ const Images = () => {
             <Image
               isBlurred
               width={240}
-              src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
-              alt="NextUI Album Cover"
+              src=""
+              alt="Quam's Photo"
               className=""
             />
             <h1 className="text-center text-lg font-medium">Quam Odesanya</h1>
@@ -102,8 +90,8 @@ const Images = () => {
             <Image
               isBlurred
               width={240}
-              src="https://nextui-docs-v2.vercel.app/images/album-cover.png"
-              alt="NextUI Album Cover"
+              src=""
+              alt="Rodger's Photo"
               className=""
             />
             <h1 className="text-center text-lg font-medium">Rodger Salmon</h1>
