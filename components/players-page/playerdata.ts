@@ -49,7 +49,7 @@ export const playersData: Player[] = [
     id: 1,
     name: "Olawale Ayejuyone",
     position: "PG",
-    imageSrc: "/assets/images/olawale.svg",
+    imageSrc: "",
     height: "6'0",
     weight: "160lbs",
     nickName: "",
