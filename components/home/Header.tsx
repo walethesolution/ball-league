@@ -106,7 +106,7 @@ const Header: React.FC = () => {
               NEWS & BLOG
             </NavLink>
             <NavLink
-              href={"/tbd"}
+              href={"/events"}
               activeLink={activeLink}
               setActiveLink={setActiveLink}
             >
@@ -167,7 +167,7 @@ const Header: React.FC = () => {
               NEWS & BLOG
             </Link>
             <Link
-              href={"/tbd"}
+              href={"/events"}
               className="mb-2 text-lg font-normal md:mb-4"
               onClick={closeMenu}
             >
