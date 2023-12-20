@@ -78,7 +78,7 @@ const Eventcards = () => {
               </p>
               <p>
                 <span className="font-bold">Description</span>: A training
-                bootcamp to push our physical ability to the next level
+                bootcamp that will push our physical ability to the next level.
               </p>
               <p>
                 <span className="font-bold">Time</span>: TBD
