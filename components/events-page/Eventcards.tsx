@@ -33,8 +33,8 @@ const Eventcards = () => {
               <p>
                 <span className="font-bold">Description</span>: Whether you have
                 designed a website before <br /> or you are yet to see the
-                computer for the first time, <br /> It don't matter, You will
-                build your first website.
+                computer for the first time, <br /> It don&apos;t matter, You
+                will build your first website.
               </p>
               <p>
                 <span className="font-bold">Time</span>: TBD
