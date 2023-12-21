@@ -48,7 +48,7 @@ const Weather: React.FC = () => {
           .toString()
           .padStart(2, "0")}`;
 
-        const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=11207&dt=${formattedDate}`;
+        const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=11207&dt=${formattedDate}`;
 
         const response = await fetch(apiUrl);
 
