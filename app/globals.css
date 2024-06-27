@@ -25,3 +25,7 @@ body {
   color: #000000;
   background-color: #fffffa;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
