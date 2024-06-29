@@ -66,18 +66,15 @@ const Header: React.FC = () => {
       <div className="w-full fixed bg-transparent shadow-lg z-50">
         <nav className="flex items-center justify-between mx-3 h-[85px]">
           <div className="flex items-center">
-            <Link href={"/"}>
-              <Image
-                className="w-[61px] h-[64px] md:w-[85px] md:h-[72px]"
-                src={Logo}
-                alt="Kings league logo"
-                onClick={handleLogoClick}
-              />
-            </Link>
             <div className="absolute left-1/2 transform -translate-x-1/2">
-              <h2 className="text-3xl text-black font-lobster font-semibold">
-                KL
-              </h2>
+              <Link href={"/"}>
+                <Image
+                  className="w-[61px] h-[64px] md:w-[85px] md:h-[72px]"
+                  src={Logo}
+                  alt="Kings league logo"
+                  onClick={handleLogoClick}
+                />
+              </Link>
             </div>
           </div>
           <div className="cursor-pointer lg:mr-4" onClick={handleMenuToggle}>
@@ -95,9 +92,7 @@ const Header: React.FC = () => {
             <Link
               href={"/games"}
               className="mb-2 text-lg font-normal md:mb-4"
-              onClick={closeMenu}>
-              GAMES
-            </Link>
+              onClick={closeMenu}></Link>
             <Link
               href={"/about"}
               className="mb-2 text-lg font-normal md:mb-4"
@@ -108,13 +103,7 @@ const Header: React.FC = () => {
               href={"/players"}
               className="mb-2 text-lg font-normal md:mb-4"
               onClick={closeMenu}>
-              PLAYERS
-            </Link>
-            <Link
-              href={"/stats"}
-              className="mb-2 text-lg font-normal md:mb-4"
-              onClick={closeMenu}>
-              STATS
+              MEMBER ENTERPRISES
             </Link>
             <Link
               href={"/updates"}
