@@ -43,90 +43,110 @@ const Header: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // Store active link in local storage whenever it changes
     localStorage.setItem("activeLink", activeLink);
   }, [activeLink]);
 
   useEffect(() => {
-    // Prevent scrolling when the menu is open
     if (menuOpen) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
 
-    // Clean up on component unmount
     return () => {
       document.body.classList.remove("no-scroll");
     };
   }, [menuOpen]);
 
   return (
-    <div>
-      <div className="w-full fixed bg-transparent shadow-lg z-50">
-        <nav className="flex items-center justify-between mx-3 h-[85px]">
-          <div className="flex items-center">
-            <div className="absolute left-1/2 transform -translate-x-1/2">
-              <Link href={"/"}>
-                <Image
-                  className="w-[61px] h-[64px] md:w-[85px] md:h-[72px]"
-                  src={Logo}
-                  alt="Kings league logo"
-                  onClick={handleLogoClick}
-                />
-              </Link>
-            </div>
-          </div>
-          <div className="cursor-pointer lg:mr-4" onClick={handleMenuToggle}>
-            {menuOpen ? (
-              <Image src={CloseIcon} alt="close-icon" />
-            ) : (
-              <Image src={Hamburger} alt="hamburger" />
-            )}
-          </div>
-        </nav>
-      </div>
+    <header className="fixed w-full bg-transparent z-50">
+      <nav className="flex items-center justify-between  h-[85px] bg-black bg-opacity-70 px-4 rounded-lg shadow-lg">
+        <Link href="/" onClick={handleLogoClick}>
+          <Image
+            src={Logo}
+            alt="Kings League logo"
+            className="w-[61px] h-[64px] md:w-[85px] md:h-[72px]"
+          />
+        </Link>
+        <div className="lg:hidden" onClick={handleMenuToggle}>
+          <Image
+            src={menuOpen ? CloseIcon : Hamburger}
+            alt={menuOpen ? "close menu" : "open menu"}
+          />
+        </div>
+        <ul className="hidden lg:flex gap-8 items-center text-white text-lg font-semibold">
+          <li>
+            <Link
+              href="/about"
+              onClick={closeMenu}
+              className={
+                activeLink === "about" ? "border-b-2 border-green-500" : ""
+              }>
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/tournament"
+              onClick={closeMenu}
+              className={
+                activeLink === "players" ? "border-b-2 border-green-500" : ""
+              }>
+              Tournaments
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/updates"
+              onClick={closeMenu}
+              className={
+                activeLink === "updates" ? "border-b-2 border-green-500" : ""
+              }>
+              Contact us
+            </Link>
+          </li>
+        </ul>
+        <Link
+          href="/login"
+          className="hidden lg:flex bg-green-600 text-white px-6 py-2 text-sm font-bold rounded-full hover:bg-green-700 transition-colors">
+          Log In
+        </Link>
+      </nav>
       {menuOpen && (
-        <div className="fixed right-0 w-1/3 top-[80px] p-2 shadow bg-[#FFFFFA] h-screen z-[9999] flex flex-col gap-24 transition-transform duration-500 ease-in-out">
-          <ul className="flex flex-col mx-4 text-xl gap-4">
+        <div className="fixed inset-0 bg-black bg-opacity-70 z-40">
+          <div className="fixed right-0 w-2/3 max-w-xs bg-white h-full shadow-lg z-50 p-6 flex flex-col gap-8">
+            <ul className="flex flex-col gap-6 text-lg font-semibold">
+              <li>
+                <Link href="/about" onClick={closeMenu}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/players" onClick={closeMenu}>
+                  Member Enterprises
+                </Link>
+              </li>
+              <li>
+                <Link href="/updates" onClick={closeMenu}>
+                  News & Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/events" onClick={closeMenu}>
+                  Events
+                </Link>
+              </li>
+            </ul>
             <Link
-              href={"/games"}
-              className="mb-2 text-lg font-normal md:mb-4"
-              onClick={closeMenu}></Link>
-            <Link
-              href={"/about"}
-              className="mb-2 text-lg font-normal md:mb-4"
+              href="/login"
+              className="bg-green-600 text-white px-6 py-2 text-sm font-bold rounded-full hover:bg-green-700 transition-colors"
               onClick={closeMenu}>
-              ABOUT US
+              Log In
             </Link>
-            <Link
-              href={"/players"}
-              className="mb-2 text-lg font-normal md:mb-4"
-              onClick={closeMenu}>
-              MEMBER ENTERPRISES
-            </Link>
-            <Link
-              href={"/updates"}
-              className="mb-2 text-lg font-normal md:mb-4"
-              onClick={closeMenu}>
-              NEWS & BLOG
-            </Link>
-            <Link
-              href={"/events"}
-              className="mb-2 text-lg font-normal md:mb-4"
-              onClick={closeMenu}>
-              EVENTS
-            </Link>
-          </ul>
-          <Link
-            href={"login"}
-            className="bg-[#2A6041] text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-7 xl:py-2.5 xl:text-base flex items-center justify-center"
-            onClick={closeMenu}>
-            LOG IN
-          </Link>
+          </div>
         </div>
       )}
-    </div>
+    </header>
   );
 };
 
