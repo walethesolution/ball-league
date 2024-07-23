@@ -139,7 +139,7 @@ const Header: React.FC = () => {
             </ul>
             <Link
               href="/login"
-              className="bg-green-600 text-white px-6 py-2 text-sm font-bold rounded-full hover:bg-green-700 transition-colors"
+              className="bg-green-600 text-white px-6 py-2 text-sm font-bold rounded-full hover:bg-green-700 transition-colors mr-4"
               onClick={closeMenu}>
               Log In
             </Link>
