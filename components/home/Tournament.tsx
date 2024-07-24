@@ -32,7 +32,7 @@ const Tournament: React.FC = () => {
     <div className="py-12 bg-gradient-to-b from-black via-gray-800 to-black text-white ">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
-          Join Our Tournaments
+          Upcoming Tournaments
         </h2>
 
         <div className="text-center mb-12 p-6 bg-gray-900 rounded-lg shadow-lg">
@@ -41,10 +41,14 @@ const Tournament: React.FC = () => {
           </h3>
           <p className="text-lg mb-6">
             Get ready for a day filled with excitement and intense competition!
-            Our tournament on August 18th is set to be a blockbuster event where
-            every player's unique style is celebrated. Only available to our
-            community members, this is your chance to shine on the court and be
-            part of an unforgettable experience.
+            Our tournament on{" "}
+            <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-1 px-2 rounded-lg">
+              August 18th
+            </span>{" "}
+            is set to be a blockbuster event where every player's unique style
+            is celebrated. Only available to our community members, this is your
+            chance to shine on the court and be part of an unforgettable
+            experience.
           </p>
           <p className="text-lg mb-6 font-bold">
             Available exclusively to community members.
