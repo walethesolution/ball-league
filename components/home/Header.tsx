@@ -123,17 +123,12 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <Link href="/players" onClick={closeMenu}>
-                  Member Enterprises
+                  Tournament
                 </Link>
               </li>
               <li>
                 <Link href="/updates" onClick={closeMenu}>
-                  News & Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/events" onClick={closeMenu}>
-                  Events
+                  Contact Us
                 </Link>
               </li>
             </ul>
