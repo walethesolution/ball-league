@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useSession, signIn } from "next-auth/react";
 import Image from "next/image";
 import BackgroundImage from "../../public/assets/images/homeCourt.png";
+import Link from "next/link";
 
 const RestrictedPage: React.FC = () => {
   //   const { status } = useSession();
@@ -44,11 +45,11 @@ const RestrictedPage: React.FC = () => {
           You need to be a member to access this page. Please sign in to
           continue.
         </p>
-        <button
-          onClick={() => signIn()}
+        <Link
+          href={"/login"}
           className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-green-600">
           Sign In
-        </button>
+        </Link>
       </div>
     </div>
   );
