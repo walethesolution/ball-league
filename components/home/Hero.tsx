@@ -43,18 +43,19 @@ const Hero: React.FC = () => {
 
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-20 px-4">
         <div className="max-w-3xl mx-auto flex flex-col gap-8 md:gap-12">
-          <h1 className="text-white font-extrabold text-4xl md:text-6xl leading-tight">
-            Feel Like a Pro, Join the KINGS LEAGUE
+          <h1 className="text-white font-extrabold text-4xl md:text-6xl leading-tight tracking-tight">
+            Elevate Your Game, Join the KINGS LEAGUE
           </h1>
-          <p className="text-white text-lg md:text-xl font-medium">
-            Become part of a professional basketball community. <br></br> Track
-            your performances and connect with local members.
+          <p className="text-white text-lg md:text-xl font-medium leading-relaxed">
+            Step into the elite. Track your stats, connect with top players, and
+            experience basketball like never before. <br /> Your journey to
+            greatness starts here.
           </p>
           <div className="relative inline-block">
             <Link
-              href={"/join"}
-              className="text-white py-3 px-8 text-lg md:text-xl bg-green-600 hover:bg-green-700 transition-colors duration-300 rounded-full shadow-lg">
-              Join our community
+              href="/join"
+              className="relative text-white py-3 px-8 text-lg md:text-xl bg-green-600 hover:bg-green-700 transition-colors duration-300 rounded-full shadow-lg">
+              Join Now
             </Link>
           </div>
         </div>
