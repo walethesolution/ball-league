@@ -29,7 +29,7 @@ const tournaments = [
 
 const Tournament: React.FC = () => {
   return (
-    <div className=" bg-gradient-to-b pt-24 from-black via-gray-800 to-black text-white rounded-lg">
+    <div className=" bg-gradient-to-b pt-24 pb-24 from-black via-gray-800 to-black text-white rounded-lg">
       <div className="container mx-auto p-4">
         <div className="text-center mb-12 p-6 bg-gray-900 rounded-lg shadow-lg">
           <h3 className="text-3xl font-bold mb-4">

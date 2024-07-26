@@ -77,6 +77,21 @@ const JoinUs: React.FC = () => {
               placeholder="Enter your password"
             />
           </div>
+          <div className="mb-6">
+            <label
+              className="block text-white text-sm font-bold mb-2"
+              htmlFor="password">
+              Verify Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-3 py-2 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+              placeholder="Enter your password"
+            />
+          </div>
           <div className="flex items-center justify-between">
             <button
               type="submit"
