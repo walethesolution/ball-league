@@ -25,21 +25,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col text-[#FFFFFA] text-base font-normal gap-4 lg:flex-row lg:gap-24">
-            <div className="flex flex-col gap-4">
+            <div className="flex gap-4">
               <Link href="/about">About Us</Link>
               <Link href="/tbd">Contact Us</Link>
-              <Link href="/updates">News</Link>
-              <Link href="/updates">Blogs</Link>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Link href="/tbd">Code of conduct</Link>
               <Link href="/tbd">Sponsors</Link>
-              <Link href="/tbd">Events</Link>
-              <Link href="/tbd">Gallery</Link>
-            </div>
-            <div className="flex flex-col gap-4">
-              <Link href="/tbd">Documentary</Link>
-              <Link href="/tbd">Funny Moments</Link>
             </div>
           </div>
         </div>
@@ -49,7 +38,6 @@ const Footer = () => {
           <div className="flex flex-col gap-3 text-white">
             <h3 className="font-bold text-xl">Get in Touch</h3>
             <p>PS 213, Brooklyn NY, 11207.</p>
-            <p>+1-(888)-123-4567</p>
             <p>info@kingsleaguebasketball.com</p>
           </div>
           <div className="flex flex-col items-left justify-center gap-3">
@@ -64,8 +52,7 @@ const Footer = () => {
               <a
                 href="https://www.youtube.com"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <Image
                   src={Youtube}
                   alt="Youtube icon"
@@ -75,8 +62,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <Image
                   src={Facebook}
                   alt="Facebook icon"
@@ -86,8 +72,7 @@ const Footer = () => {
               <a
                 href="https://www.twitter.com"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <Image
                   src={Twitter}
                   alt="Twitter icon"
@@ -97,8 +82,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <Image
                   src={Instagram}
                   alt="Instagram icon"
@@ -108,8 +92,7 @@ const Footer = () => {
               <a
                 href="https://www.whatsapp.com"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <Image
                   src={Whatsapp}
                   alt="Whatsapp icon"

@@ -60,7 +60,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed w-full bg-transparent z-50">
-      <nav className="flex items-center justify-between  h-[85px] bg-black bg-opacity-70 px-4 rounded-lg shadow-lg">
+      <nav className="flex items-center justify-between h-[85px] bg-black bg-opacity-70 px-4  shadow-lg">
         <Link href="/" onClick={handleLogoClick}>
           <Image
             src={Logo}
@@ -75,16 +75,6 @@ const Header: React.FC = () => {
           />
         </div>
         <ul className="hidden lg:flex gap-8 items-center text-white text-lg font-semibold">
-          <li>
-            <Link
-              href="/about"
-              onClick={closeMenu}
-              className={
-                activeLink === "about" ? "border-b-2 border-green-500" : ""
-              }>
-              About Us
-            </Link>
-          </li>
           <li>
             <Link
               href="/tournament"

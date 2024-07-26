@@ -1,9 +1,6 @@
 import React from "react";
 import Hero from "./Hero";
-import About from "./About";
-import Games from "./Games";
-import Welcome from "./Welcome";
-import Updates from "./Updates";
+
 import Tournament from "./Tournament";
 
 const Index = () => {
