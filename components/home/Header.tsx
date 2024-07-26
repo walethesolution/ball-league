@@ -87,7 +87,7 @@ const Header: React.FC = () => {
           </li>
           <li>
             <Link
-              href="/updates"
+              href="/contact"
               onClick={closeMenu}
               className={
                 activeLink === "updates" ? "border-b-2 border-green-500" : ""
@@ -107,12 +107,12 @@ const Header: React.FC = () => {
           <div className="fixed right-0 w-2/3 max-w-xs bg-white h-full shadow-lg p-6 flex flex-col gap-8 mt-20 z-50">
             <ul className="flex flex-col gap-6 text-lg font-semibold">
               <li>
-                <Link href="/players" onClick={closeMenu}>
+                <Link href="/tournament" onClick={closeMenu}>
                   Tournament
                 </Link>
               </li>
               <li>
-                <Link href="/updates" onClick={closeMenu}>
+                <Link href="/contact" onClick={closeMenu}>
                   Contact Us
                 </Link>
               </li>

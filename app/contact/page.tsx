@@ -1,10 +1,10 @@
-import Tournament from "@/components/tournament/Tournament";
+import ContactUs from "@/components/contact/Index";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <Tournament />
+      <ContactUs />
     </div>
   );
 };

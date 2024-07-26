@@ -12,14 +12,14 @@ const tournaments = [
     fadedText: "Who is the real sniper?",
   },
   {
-    title: "1v1 Tournament",
+    title: "1 v 1 Tournament",
     link: "restricted",
     description:
       "Show your individual skills and compete in our intense 1v1 tournament.",
     fadedText: "A must-see event",
   },
   {
-    title: "3v3 Tournament",
+    title: "3 v 3 Tournament",
     link: "restricted",
     description:
       "Team up and showcase your teamwork in our exciting 3v3 tournament.",
@@ -29,20 +29,16 @@ const tournaments = [
 
 const Tournament: React.FC = () => {
   return (
-    <div className="py-12 bg-gradient-to-b from-black via-gray-800 to-black text-white ">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Upcoming Tournaments
-        </h2>
-
+    <div className=" bg-gradient-to-b pt-24 from-black via-gray-800 to-black text-white rounded-lg">
+      <div className="container mx-auto p-4">
         <div className="text-center mb-12 p-6 bg-gray-900 rounded-lg shadow-lg">
           <h3 className="text-3xl font-bold mb-4">
-            Tournament Day: Like a Movie
+            Tournament Day: <br /> izza Movie
           </h3>
           <p className="text-lg mb-6">
             Get ready for a day filled with excitement and intense competition!
             Our tournament on{" "}
-            <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-1 px-2 rounded-lg">
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-1 px-2 rounded-lg text-xl">
               August 18th
             </span>{" "}
             is set to be a blockbuster event where every player's unique style
