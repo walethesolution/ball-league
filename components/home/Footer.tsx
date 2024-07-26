@@ -4,9 +4,7 @@ import Logo from "../../public/assets/images/logo.svg";
 import Line from "../../public/assets/icons/line.svg";
 import Youtube from "../../public/assets/icons/youtube.svg";
 import Whatsapp from "../../public/assets/icons/whatsapp.svg";
-import Twitter from "../../public/assets/icons/twitter.svg";
 import Instagram from "../../public/assets/icons/instagram.svg";
-import Facebook from "../../public/assets/icons/facebook.svg";
 
 const Footer = () => {
   return (
@@ -19,10 +17,6 @@ const Footer = () => {
               alt="Our logo"
               className="w-[70px] h-[60px] lg:w-[80px] lg:h-[80px]"
             />
-            <div className=" flex flex-col text-sm font-medium text-[#FFFFFA] gap-2">
-              <p>Come test your basketball skill.</p>
-              <p>Improve life skill as a bonus.</p>
-            </div>
           </div>
           <div className="flex flex-col text-[#FFFFFA] text-base font-normal gap-4 lg:flex-row lg:gap-24">
             <div className="flex gap-4">
@@ -38,7 +32,6 @@ const Footer = () => {
           <div className="flex flex-col gap-3 text-white">
             <h3 className="font-bold text-xl">Get in Touch</h3>
             <p>PS 213, Brooklyn NY, 11207.</p>
-            <p>info@kingsleaguebasketball.com</p>
           </div>
           <div className="flex flex-col items-left justify-center gap-3">
             <div className="flex flex-col gap-2 text-white">
@@ -56,26 +49,6 @@ const Footer = () => {
                 <Image
                   src={Youtube}
                   alt="Youtube icon"
-                  className="w-[30px] h-[30px]"
-                />
-              </a>
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <Image
-                  src={Facebook}
-                  alt="Facebook icon"
-                  className="w-[30px] h-[30px]"
-                />
-              </a>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                rel="noopener noreferrer">
-                <Image
-                  src={Twitter}
-                  alt="Twitter icon"
                   className="w-[30px] h-[30px]"
                 />
               </a>
