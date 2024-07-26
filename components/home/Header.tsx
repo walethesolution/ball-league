@@ -60,7 +60,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed w-full bg-transparent z-50">
-      <nav className="flex items-center justify-between h-[85px] bg-black bg-opacity-70 px-4  shadow-lg">
+      <nav className="flex items-center justify-between h-[85px] bg-black bg-opacity-70 px-4 shadow-lg z-50">
         <Link href="/" onClick={handleLogoClick}>
           <Image
             src={Logo}
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
             className="w-[61px] h-[64px] md:w-[85px] md:h-[72px]"
           />
         </Link>
-        <div className="lg:hidden" onClick={handleMenuToggle}>
+        <div className="lg:hidden z-50" onClick={handleMenuToggle}>
           <Image
             src={menuOpen ? CloseIcon : Hamburger}
             alt={menuOpen ? "close menu" : "open menu"}
@@ -104,13 +104,8 @@ const Header: React.FC = () => {
       </nav>
       {menuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-70 z-40">
-          <div className="fixed right-0 w-2/3 max-w-xs bg-white h-full shadow-lg z-50 p-6 flex flex-col gap-8">
+          <div className="fixed right-0 w-2/3 max-w-xs bg-white h-full shadow-lg p-6 flex flex-col gap-8 mt-20 z-50">
             <ul className="flex flex-col gap-6 text-lg font-semibold">
-              <li>
-                <Link href="/about" onClick={closeMenu}>
-                  About Us
-                </Link>
-              </li>
               <li>
                 <Link href="/players" onClick={closeMenu}>
                   Tournament
