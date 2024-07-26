@@ -20,9 +20,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col text-[#FFFFFA] text-base font-normal gap-4 lg:flex-row lg:gap-24">
             <div className="flex gap-4">
-              <Link href="/about">About Us</Link>
               <Link href="/tbd">Contact Us</Link>
-              <Link href="/tbd">Sponsors</Link>
             </div>
           </div>
         </div>

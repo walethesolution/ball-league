@@ -48,9 +48,10 @@ const Hero: React.FC = () => {
             Join the KINGS LEAGUE
           </h1>
           <p className="text-white text-lg md:text-xl font-medium leading-relaxed ">
-            Step into the elite. Connect with top players, and experience
-            basketball like never before. <br className="hidden sm:block" />{" "}
-            Your journey to greatness starts here.
+            Step into the elite. Connect with top players in the community, and
+            experience basketball like never before.{" "}
+            <br className="hidden sm:block" /> Your journey to greatness starts
+            here.
           </p>
           <div className="relative inline-block ">
             <Link
