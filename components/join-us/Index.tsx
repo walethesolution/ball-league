@@ -1,18 +1,47 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import BackgroundImage from "../../public/assets/images/homeCourt.png";
 
 const JoinUs: React.FC = () => {
-  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [verifyPassword, setVerifyPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
+
+    if (password !== verifyPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, password, verifyPassword }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        setError(data.message || "Something went wrong");
+        return;
+      }
+
+      router.push("/account-success");
+    } catch (error) {
+      setError("Failed to create account");
+    }
   };
 
   return (
@@ -31,22 +60,24 @@ const JoinUs: React.FC = () => {
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
           Create Your Account
         </h2>
+        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
               className="block text-white text-sm font-bold mb-2"
-              htmlFor="username">
-              Username
+              htmlFor="name">
+              Name
             </label>
             <input
               type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full px-3 py-2 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-              placeholder="Enter your username"
+              placeholder="Enter your full name"
             />
           </div>
+
           <div className="mb-4">
             <label
               className="block text-white text-sm font-bold mb-2"
@@ -80,16 +111,16 @@ const JoinUs: React.FC = () => {
           <div className="mb-6">
             <label
               className="block text-white text-sm font-bold mb-2"
-              htmlFor="password">
+              htmlFor="verifyPassword">
               Verify Password
             </label>
             <input
               type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              id="verifyPassword"
+              value={verifyPassword}
+              onChange={(e) => setVerifyPassword(e.target.value)}
               className="w-full px-3 py-2 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-              placeholder="Enter your password"
+              placeholder="Enter your password again"
             />
           </div>
           <div className="flex items-center justify-between">
@@ -99,7 +130,7 @@ const JoinUs: React.FC = () => {
               Create Account
             </button>
             <Link
-              href="/login"
+              href="/"
               className="text-green-600 hover:text-green-700 font-bold">
               Already have an account?
             </Link>

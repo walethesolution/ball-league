@@ -97,7 +97,7 @@ const Header: React.FC = () => {
           </li>
         </ul>
         <Link
-          href="/login"
+          href="/join"
           className="hidden lg:flex bg-green-600 text-white px-6 py-2 text-sm font-bold rounded-full hover:bg-green-700 transition-colors">
           Log In
         </Link>
