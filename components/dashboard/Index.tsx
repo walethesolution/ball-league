@@ -10,7 +10,7 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      router.push("/dashboard");
+      router.push("/");
     }, 2000);
   }, [router]);
 
