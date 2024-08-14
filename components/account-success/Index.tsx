@@ -20,6 +20,9 @@ const AccountSuccess: React.FC = () => {
 
       <div className="relative z-10 w-full max-w-md p-8 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg text-center">
         <h2 className="text-4xl font-bold text-white mb-6">Success!</h2>
+        <p className="text-lg text-gray-300 mb-4">
+          Congratulations! You are now officially a member of Kings League.
+        </p>
         <p className="text-lg text-gray-300 mb-8">
           Your account has been created successfully.
         </p>
