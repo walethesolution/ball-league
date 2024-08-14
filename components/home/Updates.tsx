@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import MiamiCourt from "../../public/assets/images/blog1.png";
+import MiamiCourt from "../../public/assets/images/gatedCourt.png";
 import SteveShooter from "../../public/assets/images/steveShooter.png";
 import "../../styles/animations.css";
 import useFadeInScroll from "@/styles/useFadeInScroll";
@@ -45,8 +45,7 @@ const Updates: React.FC = () => {
                 </p>
                 <Link
                   href={"/updates"}
-                  className="bg-[#2A6041] text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base"
-                >
+                  className="bg-[#2A6041] text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base">
                   MORE NEWS
                 </Link>
               </div>
@@ -82,8 +81,7 @@ const Updates: React.FC = () => {
                 </p>
                 <Link
                   href={"/updates"}
-                  className="bg-[#2A6041] text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base"
-                >
+                  className="bg-[#2A6041] text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-14 xl:py-4 xl:text-base">
                   MORE BLOGS
                 </Link>
               </div>

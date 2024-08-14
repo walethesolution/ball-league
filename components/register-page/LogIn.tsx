@@ -1,64 +1,89 @@
 "use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
+import BackgroundImage from "../../public/assets/images/homeCourt.png";
 
-const SignIn = () => {
-  const initialForm = {
-    email: "",
-    password: "",
-  };
-
-  const [form, setForm] = useState(initialForm);
-
-  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
-    const { name, value } = e.currentTarget;
-    setForm((prevForm) => ({ ...prevForm, [name]: value }));
-  };
+const Login: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-    alert("You have been succesfully logged in");
-    setForm(initialForm);
+    e.preventDefault();
+    // Handle form submission logic here
   };
 
   return (
-    <div>
-      <div className="w-full flex flex-col gap-4 border-b-2 py-5">
-        <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
-          <input
-            name="email"
-            id="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-            className="border rounded-lg px-4 py-2"
-          />
-          <input
-            name="password"
-            id="password"
-            value={form.password}
-            onChange={handleChange}
-            placeholder="Enter your password"
-            className="border rounded-lg px-4 py-2"
-          />
-          <button
-            type="submit"
-            className="bg-[#2A6041] text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-7 xl:py-2.5 xl:text-base flex items-center justify-center"
-          >
-            Log in
-          </button>
-        </form>
-        <Link href={"/"} className="text-center">
-          Forgot password?
-        </Link>
+    <div className="relative w-full min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={BackgroundImage}
+          alt="Background"
+          className="w-full h-full object-cover"
+          layout="fill"
+        />
+        <div className="absolute inset-0 bg-black opacity-70"></div>
       </div>
-      <Link
-        href={"/register"}
-        className="bg-[#1CA0E9] mt-4 text-white px-7 py-2.5 text-sm font-bold rounded-xl xl:px-7 xl:py-2.5 xl:text-base flex items-center justify-center"
-      >
-        Create account
-      </Link>
+
+      <div className="relative z-10 w-full max-w-lg p-8 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          Login to Your Account
+        </h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label
+              className="block text-white text-sm font-bold mb-2"
+              htmlFor="email">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-3 py-2 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              className="block text-white text-sm font-bold mb-2"
+              htmlFor="password">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-3 py-2 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div className="flex items-center justify-between">
+            <button
+              type="submit"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-green-600">
+              Login
+            </button>
+            <Link
+              href="/join"
+              className="text-green-600 hover:text-green-700 font-bold">
+              Create an account
+            </Link>
+          </div>
+          <div className="mt-6 text-center">
+            <Link
+              href="/forgot-password"
+              className="text-green-600 hover:text-green-700 font-bold">
+              Forgot your password?
+            </Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
 
-export default SignIn;
+export default Login;
